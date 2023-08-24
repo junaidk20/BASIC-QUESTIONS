@@ -63,3 +63,35 @@ function giveMeSomething(a){
     return x;
 }
 console.log(giveMeSomething("junaid"));
+//Q14:Is the Number Less than or Equal to Zero?
+function check(n){
+    if(n>0){
+       return false;
+    }
+    return true;
+}
+console.log(check(-3));
+//Q15:Pair Management
+function makePair(a,b){
+     return [a,b]
+}
+console.log(makePair(9,3));
+//Q16: Return the Last Element in an Array
+function getLastItem(arr){
+    return arr[arr.length-1];
+}
+console.log(getLastItem(["Mac","Book","M2"]));
+//Q17:Print 10 multiples of n
+function table(n){
+    for(let i= 1; i<=10 ; i++){
+        console.log(n*i);
+    }
+}
+table(7);
+//Q18:Print even numbers from 2 to 20
+function print(){
+    for(let i = 2 ; i<=20; i++){
+        console.log(i++)
+    }
+}
+print();
