@@ -26,6 +26,40 @@ console.log(convert(5));
 //Q6:Return the Next Number from the Integer Passed
 function nextNum(sum){
     return 1+sum
-    
 }
 console.log(nextNum(19));
+//Q7:Convert Age to Days
+function calcAge(Age){
+    return 365*Age;
+}
+console.log(calcAge(10));
+//Q8:buggy code
+/*function cubes(a) {
+	retunr a ** 3
+}*/ 
+//Q9:Return the First Element in an Array
+function arr(n){
+    return n[0];
+}
+console.log(arr([8,3,5]));
+//Q10:Power Calculator
+ function power(v,c){
+    return v*c
+ }
+console.log(power(230,10));
+//Q11:converts hour into second
+function howManySeconds(b){
+    return 3600*b
+}
+console.log(howManySeconds(2));
+//Q12:Find the Perimeter of a Rectangle
+function rectangle(a,b){
+  return (a+b)*2;
+}
+console.log(rectangle(2,7));
+//Q13:Return Something to Me!
+function giveMeSomething(a){
+    let x="something"+" "+a;
+    return x;
+}
+console.log(giveMeSomething("junaid"));
