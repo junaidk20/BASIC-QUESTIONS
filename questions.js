@@ -95,3 +95,10 @@ function print(){
     }
 }
 print();
+//Q19:Print numbers 10 to 1
+function downnum(){
+for(let i=10;i>=1 ; i--){
+console.log(i);
+}
+}
+downnum()
