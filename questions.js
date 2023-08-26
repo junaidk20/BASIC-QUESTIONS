@@ -113,9 +113,9 @@ function find(num,target){
 }
 //Q21:Find minimum number in an Array
 function minimum(arr) {
-    let max = -Infinity; 
+    let min = Infinity; 
     for(let i=0;i<arr.length;i++){
-        if(max>arr[i]){
+        if(min>arr[i]){
            min=arr[i];
         }
     }
@@ -123,3 +123,49 @@ function minimum(arr) {
 }
 console.log(minimum([8,5,3,7,6,1]));
 //Q22:Filter an array by a given typeof data
+function filter(arr,data){
+    let x = [];
+for(let i=0;i<arr.length;i++){
+    if(typeof arr[i]===data){
+        x.push(arr[i]);
+    }
+}
+return x;
+}
+console.log(["go",3,5,true,false],"boolean");
+//Q23:Count odd numbers in an array
+function odd(arr){
+   let x = 0;
+   for(let i=0;i<arr.length;i++){
+    if(arr[i]%2!==0){
+        x++;
+    }
+   }
+   return x;
+
+}
+console.log(odd([1,2,3,4,5]));
+//Q24:Check if given array is special or not
+function special(arr){
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2==0&&i%2==0){
+            return true
+        }else if(arr[i]%2!==0&&i%2!==0){
+            return true
+        }
+    }
+    return false
+}
+console.log(special([0,1,2,3,4,5]));
+//Q25:Count vowels in a String
+function vowelCounter(str){
+    let strL=str.toLowerCase();
+    let counter=0;
+    for(let i=0;i<strL.length;i++){
+        if(strL[i]=="a"||strL[i]=="e"||strL[i]=="i"|| strL[i]=="o"|| strL[i]=="u"){
+            counter++;
+        } 
+    }
+    return counter
+}
+console.log(vowelCounter("CelEbratIons"));
