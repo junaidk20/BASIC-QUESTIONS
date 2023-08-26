@@ -103,24 +103,23 @@ console.log(i);
 }
 }
 //Q20:Find an element in an array and its index
-function find(target){
+function find(num,target){
     for(let i=0;i<num.length;i++){
         if(num[i]==target){
             return i
-
         }
     }
-    return -1;
+    return -1; 
 }
 //Q21:Find minimum number in an Array
 function minimum(arr) {
-    let min = arr[0]; 
-    for(let i=1;i<arr.length;i++){
-        if(min>arr[i]){
+    let max = -Infinity; 
+    for(let i=0;i<arr.length;i++){
+        if(max>arr[i]){
            min=arr[i];
         }
     }
     return min;
 }
-console.log(minimum([8,5,3,7,6,9]));
+console.log(minimum([8,5,3,7,6,1]));
 //Q22:Filter an array by a given typeof data
