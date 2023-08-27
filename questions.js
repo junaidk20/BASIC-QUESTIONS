@@ -195,3 +195,13 @@ function evenCounter(arr){
 }
 console.log(evenCounter([8,2,4,5,1]));
 //Q29:Check if array is in ascending order
+function ascending(arr){
+    for(let i = 0; i<arr.length;i++){
+       if(arr[i]<=arr[i+1]){
+        return true;
+       }else{
+        return false;
+       }
+    } 
+}
+console.log(ascending([4,5,6]));
