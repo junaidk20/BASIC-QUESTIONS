@@ -88,24 +88,22 @@ function table(n){
         console.log(n*i);
     }
 }
-
 //Q18:Print even numbers from 2 to 20
 function print(){
     for(let i = 2 ; i<=20; i+=2){
         console.log(i)
     }
 }
-
 //Q19:Print numbers 10 to 1
 function downnum(){
 for(let i=10;i>=1 ; i--){
 console.log(i);
 }
 }
-//Q20:Find an element in an array and its index
-function find(num,target){
-    for(let i=0;i<num.length;i++){
-        if(num[i]==target){
+//Q20:Find an index of a given  element in an array 
+function find(arr,target){
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]==target){
             return i
         }
     }
@@ -122,7 +120,7 @@ function minimum(arr) {
     return min;
 }
 console.log(minimum([8,5,3,7,6,1]));
-//Q22:Filter an array by a given typeof data
+//Q22:Filter  eliments of an array by a given typeof data
 function filter(arr,data){
     let x = [];
 for(let i=0;i<arr.length;i++){
@@ -132,7 +130,6 @@ for(let i=0;i<arr.length;i++){
 }
 return x;
 }
-console.log(["go",3,5,true,false],"boolean");
 //Q23:Count odd numbers in an array
 function odd(arr){
    let x = 0;
@@ -144,7 +141,6 @@ function odd(arr){
    return x;
 
 }
-console.log(odd([1,2,3,4,5]));
 //Q24:Check if given array is special or not
 function special(arr){
     for(let i=0;i<arr.length;i++){
@@ -169,3 +165,12 @@ function vowelCounter(str){
     return counter
 }
 console.log(vowelCounter("CelEbratIons"));
+//Q26:find maximum number in an Array
+function maximum(arr){
+     max=-Infinity;
+     for(let i = 0 ; i < arr.length; i++){
+        if(max<arr[i]){
+            max=arr[i]
+        }
+     } return max
+}
