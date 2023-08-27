@@ -205,3 +205,12 @@ function ascending(arr){
     } 
 }
 console.log(ascending([4,5,6]));
+//Q30:Check values type of element in a given array
+function valuesType(arr){
+    let x=[]
+for(let i=0;i<arr.length;i++){
+    x.push(typeof arr[i]);
+}
+    return x
+}
+console.log(valuesType([3,true,"4","bye"]));
