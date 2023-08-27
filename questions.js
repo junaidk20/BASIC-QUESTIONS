@@ -174,3 +174,24 @@ function maximum(arr){
         }
      } return max
 }
+//Q27:Count length of given Number
+function numCounter(number){
+    let counter=0;
+    let numberS= number.toString();
+     for(let i = 0; i<numberS.length;i++){
+        counter++;
+     }
+     return counter
+}
+console.log(numCounter(365));
+//Q28:Count how many elements in an array are even
+function evenCounter(arr){
+    let counter=0;
+    for(let i = 0;i<arr.length;i++)
+    if(arr[i]%2==0){
+        counter++
+    }
+    return counter
+}
+console.log(evenCounter([8,2,4,5,1]));
+//Q29:Check if array is in ascending order
