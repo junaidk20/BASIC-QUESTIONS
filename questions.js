@@ -100,7 +100,7 @@ for(let i=10;i>=1 ; i--){
 console.log(i);
 }
 }
-//Q20:Find an index of a given  element in an array 
+//Q20:Find an index of a given  element in an array                       imp
 function find(arr,target){
     for(let i=0;i<arr.length;i++){
         if(arr[i]==target){
@@ -213,4 +213,22 @@ for(let i=0;i<arr.length;i++){
 }
     return x
 }
-console.log(valuesType([3,true,"4","bye"]));
+//Q31:Get sum of all elements in a given array
+function getSum(element){
+      sum=0;
+      for(let i=0;i<element.length;i++){
+           sum=sum+element[i]
+      }return sum
+}
+console.log(getSum([8,2,5]));
+//Q32:Find Index of given target in an array
+function indexFinder(arr,target){
+    for(let i = 0 ; i<arr.length;i++){
+        if(arr[i]==target){
+            return i;
+        }
+    }
+    return "There is No Such Type of Element!";
+}
+console.log(indexFinder([1,3,"hello"],3));
+//Q33:Find length of given words in an array
