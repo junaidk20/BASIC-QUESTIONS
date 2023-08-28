@@ -253,5 +253,15 @@ function fourLetters(str){
 console.log(fourLetters(["Lock","Potato","Doge"]));
 //Q35:Create a positive number counter and a negative number counter
 function pnCounter(arr){
-
+let PosCounter = 0;
+let negCounter =0;
+for(let i = 0; i<arr.length;i++){
+    if(arr[i]>0){
+        PosCounter++
+    }else if(arr [i]<0){
+        negCounter++
+    }
 }
+return Array(PosCounter,negCounter);
+}
+console.log(pnCounter([-9,1,3,-5,-3,-6]));
