@@ -232,3 +232,11 @@ function indexFinder(arr,target){
 }
 console.log(indexFinder([1,3,"hello"],3));
 //Q33:Find length of given words in an array
+function lengthFinder(arr){
+    let result=[];
+    for(let i = 0;i<arr.length; i++){
+        result.push(arr[i].length);
+    }
+    return result;
+}
+console.log(lengthFinder(["Hello","going","Bye"]));
