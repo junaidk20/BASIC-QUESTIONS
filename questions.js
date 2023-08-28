@@ -240,3 +240,18 @@ function lengthFinder(arr){
     return result;
 }
 console.log(lengthFinder(["Hello","going","Bye"]));
+//Q34:Create a function that takes an array of strings and returns the words that are exactly four letters.
+function fourLetters(str){
+     let fourWords=[];
+     for(let i=0; i<str.length;i++){
+        if(str[i].length==4){
+            fourWords.push(str[i]);
+        }
+     }
+     return fourWords;
+}
+console.log(fourLetters(["Lock","Potato","Doge"]));
+//Q35:Create a positive number counter and a negative number counter
+function pnCounter(arr){
+
+}
