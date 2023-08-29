@@ -287,3 +287,15 @@ function booleanChecker(str){
 return result
 }
 console.log(booleanChecker("101"));
+//Q38:Forbidden Letter
+function forbiddenLetter(arr,Letter){
+    for(let i = 0 ; i<arr.length ; i++){
+        for(let j=0;j<arr[i].length;j++){
+            if(arr[i][j]===Letter){
+                return false
+            }
+        }
+    } 
+    return true
+}
+console.log(forbiddenLetter(["Jaipur","Rajasthan","India"],"x"));
