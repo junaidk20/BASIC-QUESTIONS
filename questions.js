@@ -274,4 +274,16 @@ function product(arr){
 return productM
 }
 console.log(product([4,5]));
-//Q37:Find the boolean value by given numbers
+//Q37:Find the boolean value by given numbers in string
+function booleanChecker(str){
+    let result= [];
+    for(let i = 0 ; i < str.length;i++){
+        if(str [i]==1){
+        result.push(true);
+    }else if(str [i]==0){
+        result.push(false);
+    }
+}
+return result
+}
+console.log(booleanChecker("101"));
