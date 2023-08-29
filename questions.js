@@ -299,3 +299,5 @@ function forbiddenLetter(arr,Letter){
     return true
 }
 console.log(forbiddenLetter(["Jaipur","Rajasthan","India"],"x"));
+//Q39:Return words from given string that are on odd index
+  function
