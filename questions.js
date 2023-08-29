@@ -300,4 +300,22 @@ function forbiddenLetter(arr,Letter){
 }
 console.log(forbiddenLetter(["Jaipur","Rajasthan","India"],"x"));
 //Q39:Return words from given string that are on odd index
-  function
+  function oddIndex(arr){
+    let result=[];
+    for(let i = 0; i<arr.length; i++){
+        if(i%2!==0){
+            result.push(arr[i]);
+        }
+    }return result;
+  }
+  console.log(oddIndex("Junaid"));
+  //Q40:Check if the array is in descending order
+  function descending(arr){
+    for(let i = 0 ; i<arr.length;i++){
+        if(arr[i]>arr[i+1]){
+            return true
+        }
+
+    } return false
+  }
+  console.log(descending([4,3,1]));
