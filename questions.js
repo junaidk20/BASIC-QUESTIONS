@@ -100,7 +100,7 @@ for(let i=10;i>=1 ; i--){
 console.log(i);
 }
 }
-//Q20:Find an index of a given  element in an array                       imp
+//Q20:Find an index of a given element in an array                       imp
 function find(arr,target){
     for(let i=0;i<arr.length;i++){
         if(arr[i]==target){
@@ -265,3 +265,13 @@ for(let i = 0; i<arr.length;i++){
 return Array(PosCounter,negCounter);
 }
 console.log(pnCounter([-9,1,3,-5,-3,-6]));
+//Q36:Find the product(multiplication) of given elements in an array
+function product(arr){
+   let productM= 1;
+   for(let i = 0; i<arr.length; i++){
+    productM=productM*arr[i];
+   }
+return productM
+}
+console.log(product([4,5]));
+//Q37:Find the boolean value by given numbers
