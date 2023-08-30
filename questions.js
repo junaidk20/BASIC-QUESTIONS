@@ -318,4 +318,21 @@ console.log(forbiddenLetter(["Jaipur","Rajasthan","India"],"x"));
 
     } return false
   }
-  console.log(descending([4,3,1]));
+console.log(descending([6,5,4,3,2,1]));
+//Q41:Count how many capital letters are in the given string
+function capital(str){
+    let up=str.toUpperCase();
+    let counter=0;
+    for(let i = 0; i<str.length; i++){
+        if (str[i]==up[i]) {
+            counter++
+        }
+
+    } return counter
+
+}
+console.log(capital("hJlL"));
+//Q42:
+ function(){
+
+ }
