@@ -343,3 +343,14 @@ console.log(capital("hJlL"));
     return sum
 }
 console.log(sumEvenRange(10,20));
+//Q43:Find sum of all elements in a nested array
+function nestedSum(arr){
+    let sum=0;
+    for(let i = 0 ; i<arr.length;i++){
+         for(let j = 0; j<arr[i].length;j++){
+              sum=sum+arr[i][j];
+         }
+    }
+return sum
+}
+console.log(nestedSum([[1,2,3],[4,5,6],[7,8,9]]));
