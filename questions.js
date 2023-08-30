@@ -332,7 +332,14 @@ function capital(str){
 
 }
 console.log(capital("hJlL"));
-//Q42:
- function(){
-
- }
+//Q42:Return sum of even numbers between a given range
+ function sumEvenRange(start,stop){
+    let sum=0;
+    for(let i=start;i<=stop;i++){
+        if(i%2==0){
+            sum=sum+i;
+        }
+    }
+    return sum
+}
+console.log(sumEvenRange(10,20));
