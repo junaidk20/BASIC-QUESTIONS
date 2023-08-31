@@ -354,3 +354,37 @@ function nestedSum(arr){
 return sum
 }
 console.log(nestedSum([[1,2,3],[4,5,6],[7,8,9]]));
+//Q44:Return even elements in a nested array
+function evenNested(arr){
+    let result=[];
+    for(let i= 0; i<arr.length; i++){
+        for(let j = 0;j<arr[i].length;j++){
+           if(arr[i][j]%2==0)
+              result.push(arr[i][j])         
+        }
+    }return result
+}
+console.log(evenNested([[1,2,3],[4,5,6],[7,8,9]]));
+//Q45:Remove Duplicates from an array 
+function removeDuplicates(arr){
+    for(let i=0;i<arr.length;i++){
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[i]==arr[j]){
+                arr.splice(j,1);
+            }
+        }
+    }
+    return arr;
+}
+console.log(removeDuplicates([1, 2, 3, 4, 5, 2, 3, 4, 1, 10, 5,1]));
+//Q46:Return the last element of all arrays in a nested array
+function lastArray(arr){
+    let result=[];
+    for(let i=0; i<arr.length;i++){
+        for(let j=0; j<arr[i];j++)
+        if(arr[i].length-1==j){
+            result.push(arr[i][j])
+        }
+    }return result
+}
+console.log(lastArray([[1,2,3],[4,5,6],[7,8,9]]));
