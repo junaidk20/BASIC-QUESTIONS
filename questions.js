@@ -412,3 +412,29 @@ function twoSum(arr,target){
   }return false
 }
 console.log(twoSum([9,2,7,4],6));
+//Q49:Find largest even number in an array
+function largestEvenNum(arr) {
+   let max = -Infinity
+    for(let i=0 ; i<arr.length; i++){
+        if(max<arr[i]&&arr[i]%2==0){
+            max=arr[i]
+        }
+    }
+    return max 
+}console.log(largestEvenNum([9,3,2,6,8,2]));
+//Q50 find minimum number in nested array
+function findMinimumNested(arr) {
+   let smallest=[];
+   for(let i=0;i<arr.length;i++){
+    let min=Infinity;
+    for(let j=0;j<arr[i].length;j++){
+        if (min>arr[i][j]) {
+            min=arr[i][j]
+        }
+    }
+    smallest.push(min);
+   }
+   return smallest;
+}
+console.log(findMinimumNested([[1,2,3],[4,5,6],[7,8,9]]));
+    
