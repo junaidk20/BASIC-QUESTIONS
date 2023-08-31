@@ -388,3 +388,27 @@ function lastArray(arr){
     }return result
 }
 console.log(lastArray([[1,2,3],[4,5,6],[7,8,9]]));
+//Q47:Count how many numbers in a nested array are same as the number that is given in argument
+function sameNumber(arr,n){
+    let counter=0;
+    for(let i =0; i<arr.length;i++)
+    for(let j=0;j<arr[i].length;j++){
+      if (arr[i][j]==n) {
+          counter++
+        }
+    }
+return counter
+}
+console.log(sameNumber([[1,2,3],[4,1,6],[7,8,1]],1));
+//Q48:Check if sum of any 2 elements in array is equal to target or 2Sum
+function twoSum(arr,target){
+  for(let i=0; i<arr.length;i++){
+    for(let j=0+1;j<arr.length;j++){
+        if(arr[i]+arr[j]==target){
+           return true
+        }
+    }
+
+  }return false
+}
+console.log(twoSum([9,2,7,4],6));
