@@ -437,4 +437,17 @@ function findMinimumNested(arr) {
    return smallest;
 }
 console.log(findMinimumNested([[1,2,3],[4,5,6],[7,8,9]]));
-    
+// Q51:Remove the letters A,B&C from a string
+function removeABC(str) {
+    let lStr = str.toLowerCase().split(" ");
+    for (let i = 0; i < lStr.length; i++) {
+        for (let j = 0; j < lStr[i].length; j++) {
+            if (lStr[i][j] === "a" || lStr[i][j] === "b" || lStr[i][j] === "c") {
+                lStr[i] = lStr[i].replace(lStr[i][j], "");
+            }
+        }
+    }
+    return lStr.join(" ");
+}
+console.log(removeABC("This might be a bit hard"));
+//Q52:Find the second Largest Number
