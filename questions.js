@@ -100,7 +100,7 @@ for(let i=10;i>=1 ; i--){
 console.log(i);
 }
 }
-//Q20:Find an index of a given element in an array                       imp
+//Q20:Find an index of a given element in an array
 function find(arr,target){
     for(let i=0;i<arr.length;i++){
         if(arr[i]==target){
@@ -496,3 +496,12 @@ function elmOnce(arr) {
     return result;
 }
 console.log(elmOnce([1, 1, 2, 3, 3, 4, 10, 4, 5, 5]));
+//Q55:Reverse an array
+function reverseArr(arr){
+    let result=[];
+    for(let i=arr.length-1;i>=0;i--){
+        result.push(arr[i])
+    }
+    return result
+}
+console.log(reverseArr(["Junaid","Khan",21]));
