@@ -451,3 +451,48 @@ function removeABC(str) {
 }
 console.log(removeABC("This might be a bit hard"));
 //Q52:Find the second Largest Number
+function sLargest(a) {
+    let largest =-1;
+    let sLargest = -Infinity;3
+    for (let i = 0; i < a.length; i++) {
+        if (largest < a[i]) {
+            sLargest = largest;
+            largest = a[i];
+        } else if (largest > a[i] && a[i] > sLargest) {
+            sLargest = a[i];
+        }
+    }
+    return sLargest;
+}
+console.log(sLargest([1, 3, 2, 6, 5]));
+//Q53:Find the largest word in a string
+function largestWord(str){
+    let arr=str.split(" ")
+    let largest=-Infinity;
+    let result="";
+   for(let i=0;i<arr.length;i++){
+    if (largest<arr[i].length) {
+        largest=arr[i].length;
+        result=arr[i];
+    }
+   }
+   return result;
+
+}console.log(largestWord("I am Learning JavaScript"));
+//Q54:Find an element that has appeared only once.
+function elmOnce(arr) {
+    let result =[];
+    for (let i = 0; i < arr.length; i++) {
+        let counter = 1;
+        for (let j = 0; j < arr.length; j++) {
+            if (i !== j && arr[i] == arr[j]) {
+                counter++;
+            }
+        }
+        if (counter == 1) {
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+console.log(elmOnce([1, 1, 2, 3, 3, 4, 10, 4, 5, 5]));
