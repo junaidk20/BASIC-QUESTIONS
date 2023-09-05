@@ -144,13 +144,13 @@ function odd(arr){
 //Q24:Check if given array is special or not
 function special(arr){
     for(let i=0;i<arr.length;i++){
-        if(arr[i]%2==0&&i%2==0){
-            return true
-        }else if(arr[i]%2!==0&&i%2!==0){
-            return true
+        if(arr[i]%2==0&&i%2!==0){
+            return false
+        }else if(arr[i]%2!==0&&i%2==0){
+            return false
         }
     }
-    return false
+    return true
 }
 console.log(special([0,1,2,3,4,5]));
 //Q25:Count vowels in a String
@@ -468,7 +468,7 @@ console.log(sLargest([1, 3, 2, 6, 5]));
 //Q53:Find the largest word in a string
 function largestWord(str){
     let arr=str.split(" ")
-    let largest=-Infinity;
+    let largest=-Infinity//20;
     let result="";
    for(let i=0;i<arr.length;i++){
     if (largest<arr[i].length) {
@@ -477,8 +477,7 @@ function largestWord(str){
     }
    }
    return result;
-
-}console.log(largestWord("I am Learning JavaScript"));
+}console.log(largestWord("I am Learning khanumarfarukindia JavaScript"));
 //Q54:Find an element that has appeared only once.
 function elmOnce(arr) {
     let result =[];
