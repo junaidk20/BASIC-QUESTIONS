@@ -1,4 +1,5 @@
 //Q1:add two numbers
+
 function add(a,b){
 return a+b;
 }
@@ -38,10 +39,10 @@ console.log(calcAge(10));
 	retunr a ** 3
 }*/ 
 //Q9:Return the First Element in an Array
-function arr(n){
-    return n[0];
-}
-console.log(arr([8,3,5]));
+function FirstElm(n) {
+    return n[0]
+    
+}console.log(FirstElm([1,3,4]));
 //Q10:Power Calculator
  function power(v,c){
     return v*c
@@ -58,6 +59,10 @@ function rectangle(a,b){
 }
 console.log(rectangle(2,7));
 //Q13:Return Something to Me!
+function name(b) {
+    x="something"+" "+b
+   return x    
+}console.log(name());
 function giveMeSomething(a){
     let x="something"+" "+a;
     return x;
@@ -83,6 +88,12 @@ function getLastItem(arr){
 }
 console.log(getLastItem(["Mac","Book","M2"]));
 //Q17:Print 10 multiples of n
+function table(n) {
+    for(let i=1;i<=10;i++){
+     result.push(i*num)
+    }return result
+    
+}console.log(table(4,4));
 function table(n){
     for(let i= 1; i<=10 ; i++){
         console.log(n*i);
@@ -100,6 +111,7 @@ for(let i=10;i>=1 ; i--){
 console.log(i);
 }
 }
+downnum()
 //Q20:Find an index of a given element in an array
 function find(arr,target){
     for(let i=0;i<arr.length;i++){
@@ -120,7 +132,7 @@ function minimum(arr) {
     return min;
 }
 console.log(minimum([8,5,3,7,6,1]));
-//Q22:Filter  eliments of an array by a given typeof data
+//Q22:Filter  eliments of an array by a given typeof data 
 function filter(arr,data){
     let x = [];
 for(let i=0;i<arr.length;i++){
@@ -130,6 +142,7 @@ for(let i=0;i<arr.length;i++){
 }
 return x;
 }
+console.log(filter([1,'junaid',true],'string'));
 //Q23:Count odd numbers in an array
 function odd(arr){
    let x = 0;
@@ -193,11 +206,10 @@ function evenCounter(arr){
     }
     return counter
 }
-console.log(evenCounter([8,2,4,5,1]));
 //Q29:Check if array is in ascending order
 function ascending(arr){
     for(let i = 0; i<arr.length;i++){
-       if(arr[i]<=arr[i+1]){
+       if(arr[i-1]<=arr[i]){
         return true;
        }else{
         return false;
@@ -205,7 +217,7 @@ function ascending(arr){
     } 
 }
 console.log(ascending([4,5,6]));
-//Q30:Check values type of element in a given array
+//Q30:return values type of element in a given array f
 function valuesType(arr){
     let x=[]
 for(let i=0;i<arr.length;i++){
@@ -230,8 +242,7 @@ function indexFinder(arr,target){
     }
     return "There is No Such Type of Element!";
 }
-console.log(indexFinder([1,3,"hello"],3));
-//Q33:Find length of given words in an array
+//Q33:Find length of given words in an array  
 function lengthFinder(arr){
     let result=[];
     for(let i = 0;i<arr.length; i++){
@@ -251,7 +262,7 @@ function fourLetters(str){
      return fourWords;
 }
 console.log(fourLetters(["Lock","Potato","Doge"]));
-//Q35:Create a positive number counter and a negative number counter
+//Q35:Create a positive number counter and a negative number counter 
 function pnCounter(arr){
 let PosCounter = 0;
 let negCounter =0;
@@ -274,7 +285,7 @@ function product(arr){
 return productM
 }
 console.log(product([4,5]));
-//Q37:Find the boolean value by given numbers in string
+//Q37:Find the boolean value by given numbers in string  
 function booleanChecker(str){
     let result= [];
     for(let i = 0 ; i < str.length;i++){
@@ -299,7 +310,7 @@ function forbiddenLetter(arr,Letter){
     return true
 }
 console.log(forbiddenLetter(["Jaipur","Rajasthan","India"],"x"));
-//Q39:Return words from given string that are on odd index
+//Q39:Return words from given string that are on odd index  
   function oddIndex(arr){
     let result=[];
     for(let i = 0; i<arr.length; i++){
@@ -309,17 +320,16 @@ console.log(forbiddenLetter(["Jaipur","Rajasthan","India"],"x"));
     }return result;
   }
   console.log(oddIndex("Junaid"));
-  //Q40:Check if the array is in descending order
-  function descending(arr){
-    for(let i = 0 ; i<arr.length;i++){
-        if(arr[i]>arr[i+1]){
+  //Q40:Check if the array is in descending order 
+  function descendingChecker(arr) {
+    for(let i=1;i<arr.length;i++){
+         if (arr[i]<=arr[i-1]) {
             return true
-        }
-
-    } return false
-  }
-console.log(descending([6,5,4,3,2,1]));
-//Q41:Count how many capital letters are in the given string
+         }
+    }return false
+    
+  }console.log(descendingChecker([2,3,5,7,8]));
+//Q41:Count how many capital letters are in the given string 
 function capital(str){
     let up=str.toUpperCase();
     let counter=0;
@@ -331,7 +341,7 @@ function capital(str){
     } return counter
 
 }
-console.log(capital("hJlL"));
+console.log(capital("hJlL"))
 //Q42:Return sum of even numbers between a given range
  function sumEvenRange(start,stop){
     let sum=0;
@@ -365,12 +375,13 @@ function evenNested(arr){
     }return result
 }
 console.log(evenNested([[1,2,3],[4,5,6],[7,8,9]]));
+
 //Q45:Remove Duplicates from an array 
 function removeDuplicates(arr){
     for(let i=0;i<arr.length;i++){
         for(let j=i+1;j<arr.length;j++){
             if(arr[i]==arr[j]){
-                arr.splice(j,1);
+                arr.splice(j);
             }
         }
     }
@@ -388,7 +399,7 @@ function lastArray(arr){
     }return result
 }
 console.log(lastArray([[1,2,3],[4,5,6],[7,8,9]]));
-//Q47:Count how many numbers in a nested array are same as the number that is given in argument
+//Q47:Count how many numbers in a nested array are same as the number that is given in argument 
 function sameNumber(arr,n){
     let counter=0;
     for(let i =0; i<arr.length;i++)
@@ -437,7 +448,8 @@ function findMinimumNested(arr) {
    return smallest;
 }
 console.log(findMinimumNested([[1,2,3],[4,5,6],[7,8,9]]));
-// Q51:Remove the letters A,B&C from a string
+
+// Q51:Remove the letters A,B&C from a string 
 function removeABC(str) {
     let lStr = str.toLowerCase().split(" ");
     for (let i = 0; i < lStr.length; i++) {
@@ -450,7 +462,7 @@ function removeABC(str) {
     return lStr.join(" ");
 }
 console.log(removeABC("This might be a bit hard"));
-//Q52:Find the second Largest Number
+//Q52:Find the second Largest Number 
 function sLargest(a) {
     let largest =-1;
     let sLargest = -Infinity;3
@@ -465,11 +477,11 @@ function sLargest(a) {
     return sLargest;
 }
 console.log(sLargest([1, 3, 2, 6, 5]));
-//Q53:Find the largest word in a string
+//Q53:Find the largest word in a string imp
 function largestWord(str){
     let arr=str.split(" ")
     let largest=-Infinity//20;
-    let result="";
+    let result;
    for(let i=0;i<arr.length;i++){
     if (largest<arr[i].length) {
         largest=arr[i].length;
@@ -478,13 +490,13 @@ function largestWord(str){
    }
    return result;
 }console.log(largestWord("I am Learning khanumarfarukindia JavaScript"));
-//Q54:Find an element that has appeared only once.
+//Q54:Find an element that has appeared only once. imp
 function elmOnce(arr) {
     let result =[];
     for (let i = 0; i < arr.length; i++) {
         let counter = 1;
-        for (let j = 0; j < arr.length; j++) {
-            if (i !== j && arr[i] == arr[j]) {
+        for (let j = i+1; j < arr.length; j++) {
+            if ( arr[i] == arr[j]) {
                 counter++;
             }
         }
@@ -495,7 +507,7 @@ function elmOnce(arr) {
     return result;
 }
 console.log(elmOnce([1, 1, 2, 3, 3, 4, 10, 4, 5, 5]));
-//Q55:Reverse an array
+//Q55:Reverse an array  
 function reverseArr(arr){
     let result=[];
     for(let i=arr.length-1;i>=0;i--){
@@ -504,3 +516,112 @@ function reverseArr(arr){
     return result
 }
 console.log(reverseArr(["Junaid","Khan",21]));
+//.56 return the sum of two numbers.
+function sumOfTwoNum(a,b) {
+    return a+b
+}
+console.log(sumOfTwoNum(3,5) );
+//.57 convert minutes into sec.
+function convertMinToSec(m) {
+    return 60*m
+}
+console.log(convertMinToSec(2));
+//.58 return next num to the passed integer.
+function nextInteger(n) {
+    return n+1
+}
+console.log(nextInteger(8));
+//.59 return Area of triangle.
+function triangleArea(b,h) {
+    return (b*h)/2
+}
+console.log(triangleArea(2,6));
+//.60 convert age to days;
+function ageConverter(age) {
+     return age*365
+}
+console.log(ageConverter(1));
+//.61 buggy code (part 1)
+function buggyPart1(n) {
+ return n*n*n    
+}
+console.log(buggyPart1(3));
+//.62 return the first eliment in arr
+function firstEliment(arr) {
+  return arr[0]    
+}console.log(firstEliment([9,8,6,6]));
+//.63 return power calculater.
+function powerCal(a,b) {
+    return a*b    
+}
+console.log(powerCal(2,3));
+//.64 convert hour into seconds
+function convertHrs(h) {
+    return h*3600
+}
+console.log(convertHrs(2));
+//.65 maximum edge of triangle  imp
+function third(side1,side2) {
+    return (side1+side2)-1
+}
+console.log(third(3,4));
+//.66 remainder of two numbers imp
+function sameRemainder(a,b) {
+    return a%b
+}
+console.log(sameRemainder(3,6));
+//.66 find the perimeter of a rectangle
+function rectanglePerimeter(a,b) {
+    return (2*a)+(2*b)
+}
+console.log(rectanglePerimeter(6,7));
+//.67 return something to me
+function returnSomething(a) {
+ let x=("something"+" "+a)
+ return x
+}
+console.log(returnSomething("junaid"));
+//.68 correct the mistakes
+function correctTheMistakes(n) {
+    return n*n    
+}
+console.log(correctTheMistakes(5));
+//.69 is the number less than or equal to zero.
+function numCheck(n) {
+    if (n<=0) {
+        return "true" 
+    }return "false"
+}
+console.log(numCheck(-1));
+//.70 sum of polygon 
+function polygonSum(n) {
+   let sum=((n-2)*180)
+    return sum
+}
+console.log(polygonSum(4));
+//.71  concanate the variables
+function concanateVar(n) {    
+    return n.concat("Edabit") 
+}
+console.log(concanateVar("junaid"));
+//.72 less than 100
+function lesserThan(a,b) {
+    if (a+b<=100) {
+        return "false"
+    }return "true"
+}
+console.log(lesserThan(82+1));
+//.73 buggy code part 5
+function print(n) {
+    let result=[]
+    for(let i = 1;i<=n;i++){
+        result.push(i)
+    }return result
+}
+console.log(print([7]));
+//.74 buggy code part 7  imp
+function swap(a,b) {
+    return [b,a]
+}
+console.log(100,200);
+
