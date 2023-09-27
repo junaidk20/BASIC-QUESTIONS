@@ -619,9 +619,18 @@ function print(n) {
     }return result
 }
 console.log(print([7]));
-//.74 buggy code part 7  imp
+//.74 buggy code part 7  
 function swap(a,b) {
     return [b,a]
 }
 console.log(100,200);
+//.75 animal legs Counter
+function legCounter(chicken,cows,pigs) {
+    let x=2*chicken;
+    let y=4*cows;
+    let z=4*pigs;
+    return [x,y,z]
+}
+console.log(legCounter(9,3,6));
+
 
