@@ -632,5 +632,33 @@ function legCounter(chicken,cows,pigs) {
     return [x,y,z]
 }
 console.log(legCounter(9,3,6));
-
-
+//.76 using the && operator
+function useAnd(a,b) {
+    if (a>0&&b>0) {
+        return "true"
+    }return "false"
+}
+console.log(useAnd(2,4));
+//.77 are the numbers equal
+ function matchNum(a,b) {
+    if (a==b) {
+        return "true"
+    }return "false"
+ }
+ console.log(matchNum(1,1));
+//.78 football points
+function footballPoints(wins,draws,losses) {
+   let x=3*wins
+    let y=1*draws
+    let z=0*losses
+return x+y+z
+}
+console.log(footballPoints(3,4,2));
+//.79 convert hours and minutes into seconds
+function converter(hours,minutes) {
+    let x=3600*hours;
+    let y=60*minutes;
+    return (x+y)
+}
+console.log(converter(1,3));
+//.80 
