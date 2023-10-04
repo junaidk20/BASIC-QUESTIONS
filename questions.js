@@ -695,10 +695,10 @@ function frames(a,b) {
     return x
 }
 console.log(frames(10,25));
-//.86 miserable parody of calculater. incom
-function name(params) {
-    
-}
+//.86 miserable parody of calculator. incom
+function calculator(str) {
+    return eval(str)
+}console.log(calculator("23+4"));
 //.87 buggy code part 4
 function greeting(s) {
    let result;
@@ -739,7 +739,7 @@ function makePair2(a,b) {
     return [a,b]    
 }
 console.log(makePair2(3,5));
-//.92 compair string by count of character. imp
+//.92 compare string by count of character. imp
 function comp(str1,str2) {
    if (str1.length === str2.length) {
      return "true"
@@ -786,7 +786,7 @@ function dividesEvenly(a,b) {
     return "false"
 }
 console.log(dividesEvenly(85,4));
-//.98 return a string as an integer. imp
+//.98 return a string as an integer. 
 function stringInt(str) {
     return Number(str)
 }
@@ -816,10 +816,21 @@ function has_bugs(a) {
     return "its a good day"
 }
 console.log(has_bugs(false));
-//. 103 evaluate an equation .   incom
-//.104 solve the equation.   incomp
-//.105 learn lodash drop the first eliment of arr
-//.106 upvotes and down votes 
+//.103 evaluate an equation . imp
+function eq(str) {
+    return eval(str)
+}
+console.log(eq("3+2-4"));
+//.104 solve the equation.  imp
+function equation(str) {
+    return eval(str)
+}
+console.log(equation("6+8"));
+//.105 learn lodash drop the first eliment of arr  incomp
+function drop(arr,n){
+    return arr.slice(n)
+}console.log(drop([1,2,3],0));
+//.106 upvotes and down votes  imp
 function getvoteCount(votes) {
     let x= votes.downvotes;
     let y=votes.upvotes;
@@ -871,6 +882,9 @@ return false
   }
 console.log(serveDrink(19,true));
 //.112 century crisis
+function futurePeople(p,n){
+    return p+(n*360)
+}console.log(futurePeople(256,2));
 //.113 template string
 function templateString() {
     let a= "john";
@@ -880,4 +894,366 @@ function templateString() {
 }  
 templateString()
 //.114 arrow function
-//.115
+//.116 minimal if else
+function minimal(n) {
+    if(n>0)return "positive"
+    if(n<0)return "negative"
+    return "equal"
+}
+console.log(minimal(8));
+//.117 is the string odd or even
+function oddOrEven(str) {
+    if (str.length%2==0) return true
+    if(str.length%2!==0) return false
+}console.log(oddOrEven("junai"));
+//.119 inches to feet   incomp
+function inchesToFeet(inch){
+    return inch/12
+}console.log(inchesToFeet(324));
+//.120 I'd like a new shade of blue,please
+function howManyWalls(n,w,h){
+    if(w*h>=n){
+        return 0
+    }else{
+        return 100/(w*h)
+    }
+}console.log(howManyWalls(100,4,5));
+//.121 to the power of
+function calculateExponent(b,e){
+    return b**e
+}console.log(calculateExponent(5,5));
+//.122 return the last eliment of array imp
+function LastElm2(arr) {
+    return arr[arr.length-1]
+}
+console.log(LastElm2([1,2,3,4]));
+//.123 string and number conversions
+function tostring(num) {
+    return num.toString()
+}
+console.log(tostring(95));
+    function StringToNum(str){ 
+    return Number(str)
+    }
+    console.log(StringToNum("4"));
+//.124 on/off switches incomp
+//.125 among us Imposter formula
+ function imposterFormula(i,p) {
+    return 100*(i/p)
+ }
+ console.log(imposterFormula(1,10));
+ //.126 find the leap year
+ function leapYear(year) {
+    if(year%4==0) return "true"
+    if(year%4!==0)return "false"
+ }console.log(leapYear(1968));
+//.127 word without first character   incomp
+function newWord(str){
+    let arr=str.split("")
+    arr.splice(0,1)
+    return arr.join("")
+}console.log(newWord("apple"));
+//.128 flip the boolean
+function flipBool(b) {
+    if(b==true) return 0
+    if(b==false) return 1
+    if (b==1) return 0
+    if(b==0) return 1    
+}
+console.log(flipBool(0));
+//.129 name greeting
+function helloName(n) {
+    let x="hello"
+    let y=(x+" "+n)
+    return y
+}console.log(helloName("junaid"));
+  //.130 is the number even or odd
+  function isEvenOrOdd(n) {
+    if(n%2==0) return "even"
+    if(n%2!==0)return "odd"
+  }      
+  console.log(isEvenOrOdd(2));
+  //.131 check whether a given number is odd
+  function isOdd(n) {
+    if(n%2!==0) return true
+    if(n%2==0) return false
+  }
+  console.log(isOdd(0));
+  //.132 stack the boxes
+  function stackBoxes(n) {
+    if(n>=0&&n<=1) return n
+    if(n>1) return n+n
+    
+  }
+    console.log(stackBoxes(2));
+//.133 triangle and parallelogram are finder
+function areashape(b,h,shape) {
+    if(shape=="triangle") return (0.5 * b * h)
+    if (shape=="parallogram") return (b * h)
+}
+console.log(areashape(8,6,"parallogram"));
+//.134 convert an array to a string
+function arrayTostring(arr) {
+    return arr.toString()
+}
+console.log(arrayTostring([1,2,3,4,5,6,]));
+//.135 concatenating Two Integer Array
+function concatenating(a,b) {
+    return a.concat(b)
+}
+console.log(concatenating([1,2,3,4,5,6],[7,8,9]));
+//.136 find the index
+function findIndex(arr,str) {
+    let result=[];
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]==str) {
+           result.push(i)
+        }
+    }
+    return result
+}
+console.log(findIndex(["hi","edabit","fgh","abc"],"fgh"));
+//.137 array indexing
+function valueAt(arr,n){
+    let index=Math.floor(n)
+    return arr[index]
+}console.log(valueAt([1, 2, 3, 4], 6.535355314 / 2));
+//.138 find the index part 1.
+function search(arr,n) {
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]==n) {
+            return i
+        }
+    }
+    return -1
+}
+console.log(search([1,2,3,4,5],2));
+//.139 buggy code
+function sumArray(arr) {
+   let sum=0
+    for(let i=0;i<arr.length;i++){
+        sum+=arr[i]
+    }
+     return sum
+}
+console.log(sumArray([1,2,3,4,5]));
+//.140 find the index
+function search1(arr,n){
+    for(let i=0;i<arr.length;i++){
+       if (arr[i]==n) {
+        return i
+       }
+    }
+    return -1
+}
+console.log(search([1,2,3,4,5,6],6));
+//.142 word Numbers!
+function word(str) {
+    if(str=="one") return 1
+    if(str=="two") return 2
+    if(str=="three") return 3
+    if(str=="four") return 4
+    if(str=="five") return 5
+    if(str=="six") return 6
+    if(str=="seven") return 7
+    if(str=="eight") return 8
+    if(str=="nine") return 9
+    if(str=="ten") return 10
+}
+console.log(word("ten"));
+//.143 check if array contains a given number
+function check2(arr,n) {
+   let result=""
+    for(let i= 0;i<arr.length;i++){
+        if (arr[i]==n) {
+           return true
+        }
+    }
+    return false
+    
+}console.log(check2([1,2,3,4,5,6,7,8],5));
+//.144 minimal bool .comp
+//.145 number of stikers
+function howManystickers(n) {
+    return n*n*6
+}
+console.log(howManystickers(3));
+//.146 burglary series(19):Prevent changes incomp
+//.147 check string for spaces  imp
+function hasSpaces(str) {
+    for(let i=0;i<str.length;i++){
+        if(str[i]==" "){
+            return true
+        }
+    }
+    return false
+}console.log(hasSpaces("hello, world"));
+//.148 kinetic energy    imp
+function kineticEnergy(m,v){
+    let kinetic=(m*v*v)/2
+    return kinetic
+}console.log(kineticEnergy(45,10));
+//.149 volume of a box      imp
+//. 150 recreating abs() function
+function absolute(n){
+    return Math.abs(n)
+}
+console.log(absolute(-122));
+//.151 is the last character "n" incomp
+function isLastCharacterN(str) {
+    if (str[str.length-1]=="n") {
+        return true
+    }
+    return false
+}
+console.log(isLastCharacterN("khan"));
+//.152 less than greater than
+function arrbetween(num1,num2,arr) {
+    let result=[]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]>num1&&arr[i]<num2) {
+            result.push(arr[i])
+        }
+    }
+    return result
+}
+console.log(arrbetween(3,8,[1,5,95,0,4,7]));
+//153. 50-30-20 strategy incomp
+//154. count the argument incomp
+//155.find the bug: returning the container
+function getContainer(c) {
+    if(c=="bread") return "bag"
+    if(c=="beer") return "bottle"
+    if(c=="candy") return "plastic"
+    if(c=="cheese") return "null"
+}console.log(getContainer("candy"));
+//.156 .many operators 
+function operate(num1,num2,operator) {
+     if(operator=="+") return num1+num2
+     if(operator=="-") return num1-num2
+     if(operator=="%") return num1%num2
+    
+}console.log(operate(20,10,"%"));
+//.157. has same breads. imp+
+function hasSameBreads(a,b) {
+    if(a[0]==b[0]&&a[a.length-1]==b[b.length-1]&&a[0]==a[a.length-1]&&b[0]==b[b.length-1]&&a[0]==b[b.length-1]&&b[0]==a[a.length-1]){
+        return true
+    }
+    return false
+} 
+console.log(hasSameBreads(["white brea","lettuce","white bread"],["white bread","tomato","white bread"]));
+//.158. nth star number incomp
+//159 return the total number of paramenter incomp
+//.160 
+function relationToLuke(str) {
+    if(str=="Darth Vadar") return "luke iam your father"
+    if(str=="leila") return "luke iam your sister"
+    if(str=="Han") return "luke iam your brother in law"
+    if(str=="R2D2") return "luke iam your droid"
+}
+console.log(relationToLuke("Darth Vadar"));
+//.161 convert all aray items in string
+function parseArray(arr) {
+   let x= arr.toString()
+   return [x]
+}
+console.log(parseArray([1,2,"a","b"]));
+//.162 front 3- slice check repeat concanate incomp
+function frontThree(str) {
+    for(let i=0; i<str.length;i++){
+       if (str[i].length>3) {
+           
+       }
+    }
+        
+    }
+//.163 extract city facts incomp
+function cityFacts() {
+    console.log();
+}
+//.164 return types
+function arrayValueType(arr) {
+    let result=[];
+    for(let i=0;i<arr.length;i++){
+        result.push(typeof arr[i])
+
+    }return result
+    
+}
+console.log(arrayValueType([1,""]));
+//.165 array of string and array of numbers incomp
+     function toNumberArray(arr) {
+        let x=parseFloat(arr)
+        return [x]
+     }
+     console.log(toNumberArray(["1","2","6"]));
+//.166 is the word singular or plural?
+  function isPlural(a) {
+    if(a[a.length-1]=="s") return true
+    if(a[a.length-1]!=="s") return false
+    
+  }
+  console.log(isPlural("chenges"));
+  //.167 Concanating first and last Characters of a string
+  function firstLast(str) {
+   let x= str[0].concat(str[str.length-1])
+    return x
+  }
+  console.log(firstLast("junaid"));
+  //.168 slice of pie   incomp
+function equalSlices(ts,nr,se) {
+    if(ts>nr&&ts>se&&nr>se){
+      return true
+    }
+        return false
+    }
+    
+console.log(equalSlices(11,5,3));
+//.169 function stuttring incomp 
+function stuttring() {
+    
+}
+//.170 destructive array incomp 
+function vari(arr) {
+    
+}
+//.171 fraction is greater than 1
+function graeaterThanOne(fraction) {
+    if(fraction>1){ 
+        return true
+    }else if (fraction<1) {
+        return false
+    }
+    return false
+    
+}console.log(graeaterThanOne(7/4));
+//.172 default mood 
+function moodToday(str) {
+    if(str=="happy") return "today iam feeling happy"
+    if(str=="sad") return "today iam feeling sad"
+    if(str=="") return "today iam feeling neutral"
+    
+}
+console.log(moodToday("sad"));
+//.173 reverse psychology
+function reversePhycology(str) {
+    let x= "do not"+" "+str
+if(str=="") return "do not do anything"
+    return x
+    
+}console.log(reversePhycology(""));
+//.174 destructing Assignment incomp
+function writeYourCode(elm) {
+arr=[1,2,3,4,5,6,7,8,9]
+first=arr[0]
+second=arr[1]
+three=arr[2]
+four=arr[3]
+other= other.splice(3)
+}
+//.175 repeat string incomp
+//.176 does a number exist? incomp
+//.177 count the syllabus incomp
+//.178 squares and cubes incomp
+//.179 circle or square incomp
+//.180 char-to-ASC||
