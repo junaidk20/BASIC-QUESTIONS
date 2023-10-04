@@ -937,6 +937,9 @@ console.log(tostring(95));
     }
     console.log(StringToNum("4"));
 //.124 on/off switches incomp
+function posCom(n){
+    return 2**n
+}console.log(posCom(10));
 //.125 among us Imposter formula
  function imposterFormula(i,p) {
     return 100*(i/p)
@@ -1079,6 +1082,12 @@ function howManystickers(n) {
 }
 console.log(howManystickers(3));
 //.146 burglary series(19):Prevent changes incomp
+function preventChanges(obj) {
+    Object.freeze(obj);
+    obj.noChanges = false;
+    obj.signature = "whatever";
+    return obj;
+}console.log(preventChanges({noChanges: true}));
 //.147 check string for spaces  imp
 function hasSpaces(str) {
     for(let i=0;i<str.length;i++){
@@ -1094,6 +1103,9 @@ function kineticEnergy(m,v){
     return kinetic
 }console.log(kineticEnergy(45,10));
 //.149 volume of a box      imp
+function volumeOfBox(volume){
+    return volume.w*volume.l*volume.h
+}console.log(volumeOfBox({ w: 2, l: 5, h: 2 }));
 //. 150 recreating abs() function
 function absolute(n){
     return Math.abs(n)
@@ -1119,7 +1131,18 @@ function arrbetween(num1,num2,arr) {
 }
 console.log(arrbetween(3,8,[1,5,95,0,4,7]));
 //153. 50-30-20 strategy incomp
+function fiftyThirtyTwenty(ati){
+    let strategy={
+        Needs:(ati/100)*50,
+        Wants:(ati/100)*30,
+        Savings:(ati/100)*20
+    }
+    return strategy
+}console.log(fiftyThirtyTwenty(100000));
 //154. count the argument incomp
+function numArgs(){
+    console.log(arguments.length);
+}numArgs("hi",1,2)
 //155.find the bug: returning the container
 function getContainer(c) {
     if(c=="bread") return "bag"
@@ -1143,7 +1166,11 @@ function hasSameBreads(a,b) {
 } 
 console.log(hasSameBreads(["white brea","lettuce","white bread"],["white bread","tomato","white bread"]));
 //.158. nth star number incomp
-//159 return the total number of paramenter incomp
+function starNumber(n){
+    let star=6*n*(n-1)+1
+    return star
+}console.log(starNumber(3));
+//159 return the total number of paramenter incomp =>Same as Q.154
 //.160 
 function relationToLuke(str) {
     if(str=="Darth Vadar") return "luke iam your father"
@@ -1160,17 +1187,20 @@ function parseArray(arr) {
 console.log(parseArray([1,2,"a","b"]));
 //.162 front 3- slice check repeat concanate incomp
 function frontThree(str) {
-    for(let i=0; i<str.length;i++){
-       if (str[i].length>3) {
-           
-       }
+    let threeWords=""
+    for(let i=0;i<3;i++){
+        threeWords+=str[i]
     }
-        
-    }
+    let result=threeWords+threeWords+threeWords
+    return result
+}console.log(frontThree("Python"));
 //.163 extract city facts incomp
-function cityFacts() {
-    console.log();
-}
+function cityFacts(facts) {
+    let x=facts.name
+    let y=facts.population
+    let z=facts.continent
+    return  `${x} has a population of ${y} and is situated in ${z}`
+}console.log(cityFacts({name: "Paris",population: "2,140,526",continent: "Europe"}));
 //.164 return types
 function arrayValueType(arr) {
     let result=[];
@@ -1178,15 +1208,17 @@ function arrayValueType(arr) {
         result.push(typeof arr[i])
 
     }return result
-    
 }
 console.log(arrayValueType([1,""]));
 //.165 array of string and array of numbers incomp
-     function toNumberArray(arr) {
-        let x=parseFloat(arr)
-        return [x]
-     }
-     console.log(toNumberArray(["1","2","6"]));
+function toNumberArray(arr) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        result.push(+arr[i])
+    }
+    return result
+}
+console.log(toNumberArray(["1","2","6"]));
 //.166 is the word singular or plural?
   function isPlural(a) {
     if(a[a.length-1]=="s") return true
@@ -1194,29 +1226,27 @@ console.log(arrayValueType([1,""]));
     
   }
   console.log(isPlural("chenges"));
-  //.167 Concanating first and last Characters of a string
+//.167 Concanating first and last Characters of a string
   function firstLast(str) {
    let x= str[0].concat(str[str.length-1])
     return x
   }
   console.log(firstLast("junaid"));
-  //.168 slice of pie   incomp
+//.168 slice of pie   incomp
 function equalSlices(ts,nr,se) {
-    if(ts>nr&&ts>se&&nr>se){
-      return true
-    }
-        return false
-    }
-    
+    let result=nr*se
+    if(result<=ts){
+        return true
+    }return false
+}
 console.log(equalSlices(11,5,3));
 //.169 function stuttring incomp 
-function stuttring() {
-    
-}
-//.170 destructive array incomp 
-function vari(arr) {
-    
-}
+function stuttring(str) {
+    let w1=str[0]
+    let w2=str[1]
+    return `${w1}${w2}... ${w1}${w2}... ${str}`
+}console.log(stuttring("incredible"));
+//.170 destructive array incomp=>Completed this before
 //.171 fraction is greater than 1
 function graeaterThanOne(fraction) {
     if(fraction>1){ 
@@ -1242,18 +1272,45 @@ if(str=="") return "do not do anything"
     return x
     
 }console.log(reversePhycology(""));
-//.174 destructing Assignment incomp
-function writeYourCode(elm) {
-arr=[1,2,3,4,5,6,7,8,9]
-first=arr[0]
-second=arr[1]
-three=arr[2]
-four=arr[3]
-other= other.splice(3)
-}
+//.174 destructing Assignment incomp=>No need
 //.175 repeat string incomp
+function repeatString(txt, n){
+    return txt.repeat(n)
+}console.log(repeatString("Mubashir", 3));
 //.176 does a number exist? incomp
-//.177 count the syllabus incomp
+function validStrNumber(str){
+    let result=true
+    let num=+str
+    if(isNaN(num)){
+        result=false
+    }
+    return result
+}console.log(validStrNumber("hi"));
+//.177 count the syllables incomp
+function countSyllables(str){
+    let lstr=str.toLowerCase()
+    let w1=lstr[0]
+    let w2=lstr[1]
+    let counter=0
+    for(let i=0;i<lstr.length;i++){
+        if(lstr[i]==w1&&lstr[i+1]==w2){
+            counter++
+        }
+    }
+    return counter
+}console.log(countSyllables("Hehehehehehe"));
 //.178 squares and cubes incomp
+function checkSquareAndCube(arr){
+    if(Math.sqrt(arr[0])==Math.cbrt(arr[1])){
+        return true
+    }
+    return false
+}console.log(checkSquareAndCube([4, 8]));
 //.179 circle or square incomp
-//.180 char-to-ASC||
+function circleorsquare(radius,area){
+    let circumfrence=2*(22/7)*radius
+    let perimeter=(Math.sqrt(area))*4
+    if(circumfrence>perimeter){
+        return true
+    }return false
+}console.log(circleorsquare(16,625));
