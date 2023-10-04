@@ -661,4 +661,223 @@ function converter(hours,minutes) {
     return (x+y)
 }
 console.log(converter(1,3));
-//.80 
+//.80 fix the expression
+function fix(x) {
+    if (x==7) {
+        return "true"
+    }return"false"
+}console.log(fix(7));
+//.81 equality check
+function equalityChecker(a,b) {
+    if (a==b) {
+        return "true"
+    }
+    return "false"
+}
+console.log(equalityChecker(1,1));
+//.82 profitable gambling
+function gambling(prob,prize,pay) {
+    if (prob*prize>pay) {
+        return "true"
+    }
+    return "false"
+}
+console.log(gambling(0.9,3,2));
+//.83 boolean to string
+function booleanConverter(b) {
+   let flag=b.toString()
+   return flag 
+}console.log(booleanConverter(true));
+//.84 using arrow function. incom
+//.85 frames per sec. imp
+function frames(a,b) {
+    x=a*b*60
+    return x
+}
+console.log(frames(10,25));
+//.86 miserable parody of calculater. incom
+function name(params) {
+    
+}
+//.87 buggy code part 4
+function greeting(s) {
+   let result;
+    if (s=="matt") {
+        result="hello,matt"
+    }else if (s=="mubashir") {
+        result="hello, my love!"
+    }else if(s=="helen"){
+        result="hello, halen!"
+    }return result
+}console.log(greeting("matt"));
+//.88 two makes ten
+function makeTen(a,b){
+    if (a+b==10||a==10||b==10) {
+        return "true"
+    }return "false"
+}
+console.log(makeTen(1,9));
+//.89 let`s fuel up!
+function calculateFuel(d) {
+    if (d*10<100) {
+      return 100
+    }return d*10
+}
+console.log(calculateFuel(3));
+//.90 buggy code part 2
+function maxNum2(a,b) {
+    if (a>b) {
+        return a
+    }else if (b>a) {
+        return b
+    }
+    return a,b
+}
+console.log(maxNum2(10,12));
+//.91 pair Managment
+function makePair2(a,b) {
+    return [a,b]    
+}
+console.log(makePair2(3,5));
+//.92 compair string by count of character. imp
+function comp(str1,str2) {
+   if (str1.length === str2.length) {
+     return "true"
+   } 
+   return "false"
+}
+console.log(comp("abc","hsg"));
+//.93 is the string empty?
+function isEmpty(s) {
+    if (s==("")) {
+        return "true"
+    }else if (s==(" ")) {
+        return "false"
+    }return "false"
+    
+}
+console.log(isEmpty("b"));
+//.94 check if an integer is divisible by five
+function divisibleByFive(n) {
+    if (n%5==0) {
+      return "true"
+    }
+   return "false"
+}
+console.log(divisibleByFive(37));
+//.95 check if an integer is divisible by 100
+function dividible(n) {
+    if (n%100==0) {
+        return "true"
+    }
+    return "false"
+}
+console.log(dividible(100));
+//.96 recursion length of a string
+function length1(str) {
+    return str.length
+    
+}console.log(length1("apple"));
+//.97 divides evenly
+function dividesEvenly(a,b) {
+    if (a%b==0 && a>=b) {
+        return "true"
+    }
+    return "false"
+}
+console.log(dividesEvenly(85,4));
+//.98 return a string as an integer. imp
+function stringInt(str) {
+    return Number(str)
+}
+console.log(stringInt("9"));
+//.99 area of rectangle 
+function area(l,b) {
+    if (l*b) {
+        return "true"
+    }
+    return -1
+}
+console.log(area(-1,11));
+//.100 tips
+//.101 concanate first and last name 
+function concatName(a,b) {
+    let x = b.concat(a)
+    let y = x.toString()
+     return y
+}console.log(concatName("junaid","khan"));
+//. 102 buggy code
+function has_bugs(a) {
+    if (a==true) {
+        return "sad days"
+    }else if (a==false) {
+        
+    }
+    return "its a good day"
+}
+console.log(has_bugs(false));
+//. 103 evaluate an equation .   incom
+//.104 solve the equation.   incomp
+//.105 learn lodash drop the first eliment of arr
+//.106 upvotes and down votes 
+function getvoteCount(votes) {
+    let x= votes.downvotes;
+    let y=votes.upvotes;
+    return x-y
+}
+console.log(getvoteCount({upvotes: 13, downvotes: 0}));
+//.107 return negative
+function returnNegative(n) {
+   let x=n-n-n
+    return x
+}
+console.log(returnNegative(4));
+//.108 reverse an array
+ function reverse(arr) {
+   let result=[]
+    for(let i=arr.length-1;i>=0;i--){
+          result.push(i)
+    }
+    return result
+ }
+ console.log(reverse([1,2,3,4,5]));
+ //.109 movie Theatre Admittance  imp
+ function acceptIntoMovies(age,isSupervised) {
+    let result=false
+    if (age<15 && isSupervised==true) {
+        result=true
+    }else if (isSupervised==false&&age>=15||isSupervised==true) {
+        result=true
+    }
+    return result
+ }console.log(acceptIntoMovies(12,false));
+ //.110 simple array manipulation  imp
+ function incrementItem(arr) {
+   let result=[]
+    for(let i=0;i<arr.length;i++){
+        result.push(arr[i]+1)
+    }return result
+ }console.log(incrementItem([1,2,3,4]));
+ //.111 drinks allowed?
+  function serveDrink(age,b){
+    if (age>=18&&b==true) {
+        return false
+    }else if (b==false&&age<18) {
+        return false
+    }else if (age>=18&&b==false) {
+        return  true
+    }
+return false
+  }
+console.log(serveDrink(19,true));
+//.112 century crisis
+//.113 template string
+function templateString() {
+    let a= "john";
+    let b = "joe";
+    let c = "jack";
+    console.log(`hello,my name is ${a}`);
+}  
+templateString()
+//.114 arrow function
+//.115
