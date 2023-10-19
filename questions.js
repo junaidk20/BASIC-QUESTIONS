@@ -560,16 +560,16 @@ function convertHrs(h) {
     return h*3600
 }
 console.log(convertHrs(2));
-//.65 maximum edge of triangle  imp
-function third(side1,side2) {
-    return (side1+side2)-1
-}
-console.log(third(3,4));
-//.66 remainder of two numbers imp
+//.65 maximum edge of triangle  
+function nextEdge(s1,s2){
+    return (s1+s2)-1
+
+}console.log(nextEdge(9,2));
+//.66 remainder of two numbers 
 function sameRemainder(a,b) {
-    return a%b
+    return a%b==0
 }
-console.log(sameRemainder(3,6));
+console.log(sameRemainder(5,5));
 //.66 find the perimeter of a rectangle
 function rectanglePerimeter(a,b) {
     return (2*a)+(2*b)
@@ -689,16 +689,16 @@ function booleanConverter(b) {
    return flag 
 }console.log(booleanConverter(true));
 //.84 using arrow function. incom
-//.85 frames per sec. imp
-function frames(a,b) {
-    x=a*b*60
-    return x
-}
-console.log(frames(10,25));
+//.85 frames per sec. 
+function frames(a,b){
+    return a*b*60
+
+}console.log(frames(10,25));
 //.86 miserable parody of calculator. incom
-function calculator(str) {
+function calculater(str){
     return eval(str)
-}console.log(calculator("23+4"));
+    
+}console.log(calculater("23+7"));
 //.87 buggy code part 4
 function greeting(s) {
    let result;
@@ -739,14 +739,12 @@ function makePair2(a,b) {
     return [a,b]    
 }
 console.log(makePair2(3,5));
-//.92 compare string by count of character. imp
-function comp(str1,str2) {
-   if (str1.length === str2.length) {
-     return "true"
-   } 
-   return "false"
-}
-console.log(comp("abc","hsg"));
+//.92 compare string by count of character. 
+function comp(a,b){
+    if (a.length==b.length) {
+        return true
+    }return false
+}console.log(comp("ABC","CD"));
 //.93 is the string empty?
 function isEmpty(s) {
     if (s==("")) {
@@ -816,34 +814,29 @@ function has_bugs(a) {
     return "its a good day"
 }
 console.log(has_bugs(false));
-//.103 evaluate an equation . imp
-function eq(str) {
-    return eval(str)
+//.103 evaluate an equation .
+//.104 solve the equation.  
+//.105 learn lodash drop the first eliment of arr  
+function drop(arr,l){
+    return arr.splice(l)
 }
-console.log(eq("3+2-4"));
-//.104 solve the equation.  imp
-function equation(str) {
-    return eval(str)
-}
-console.log(equation("6+8"));
-//.105 learn lodash drop the first eliment of arr  incomp
-function drop(arr,n){
-    return arr.slice(n)
-}console.log(drop([1,2,3],0));
-//.106 upvotes and down votes  imp
-function getvoteCount(votes) {
-    let x= votes.downvotes;
-    let y=votes.upvotes;
-    return x-y
-}
-console.log(getvoteCount({upvotes: 13, downvotes: 0}));
-//.107 return negative
+console.log(drop([1,2,3],2));
+//.106 upvotes and down votes  
+function getVoteCount(votes) {
+    return votes.upvotes-votes.downvotes
+    
+}console.log(getVoteCount({upvotes:13,downvotes:7}));
+
+//.107 return negative  imp
 function returnNegative(n) {
-   let x=n-n-n
-    return x
+   if (n<0){
+     return n
+   }else if(n>0){
+    return -n
+   }
 }
 console.log(returnNegative(4));
-//.108 reverse an array
+//.108 reverse an array  
  function reverse(arr) {
    let result=[]
     for(let i=arr.length-1;i>=0;i--){
@@ -852,7 +845,7 @@ console.log(returnNegative(4));
     return result
  }
  console.log(reverse([1,2,3,4,5]));
- //.109 movie Theatre Admittance  imp
+ //.109 movie Theatre Admittance  
  function acceptIntoMovies(age,isSupervised) {
     let result=false
     if (age<15 && isSupervised==true) {
@@ -862,13 +855,13 @@ console.log(returnNegative(4));
     }
     return result
  }console.log(acceptIntoMovies(12,false));
- //.110 simple array manipulation  imp
- function incrementItem(arr) {
-   let result=[]
-    for(let i=0;i<arr.length;i++){
-        result.push(arr[i]+1)
-    }return result
- }console.log(incrementItem([1,2,3,4]));
+ //.110 simple array manipulation  
+ function incrementItems(arr){
+  let result=[];
+  for(let i=0;i<arr.length;i++){
+        result.push(1+arr[i])
+  }return result
+  }console.log(incrementItems([0,1,2,3]));
  //.111 drinks allowed?
   function serveDrink(age,b){
     if (age>=18&&b==true) {
@@ -906,10 +899,10 @@ function oddOrEven(str) {
     if (str.length%2==0) return true
     if(str.length%2!==0) return false
 }console.log(oddOrEven("junai"));
-//.119 inches to feet   incomp
+//.119 inches to feet   
 function inchesToFeet(inch){
     return inch/12
-}console.log(inchesToFeet(324));
+}console.log(inchesToFeet(12));
 //.120 I'd like a new shade of blue,please
 function howManyWalls(n,w,h){
     if(w*h>=n){
@@ -918,13 +911,14 @@ function howManyWalls(n,w,h){
         return 100/(w*h)
     }
 }console.log(howManyWalls(100,4,5));
-//.121 to the power of
+//.121 to the power of  
 function calculateExponent(b,e){
     return b**e
 }console.log(calculateExponent(5,5));
-//.122 return the last eliment of array imp
+//.122 return the last eliment of array 
 function LastElm2(arr) {
     return arr[arr.length-1]
+    
 }
 console.log(LastElm2([1,2,3,4]));
 //.123 string and number conversions
@@ -936,7 +930,7 @@ console.log(tostring(95));
     return Number(str)
     }
     console.log(StringToNum("4"));
-//.124 on/off switches incomp
+//.124 on/off switches
 function posCom(n){
     return 2**n
 }console.log(posCom(10));
@@ -950,11 +944,11 @@ function posCom(n){
     if(year%4==0) return "true"
     if(year%4!==0)return "false"
  }console.log(leapYear(1968));
-//.127 word without first character   incomp
+//.127 word without first character   
 function newWord(str){
-    let arr=str.split("")
-    arr.splice(0,1)
-    return arr.join("")
+    let x= str.split("")
+    let y= x.splice(1)
+    return y.join("")
 }console.log(newWord("apple"));
 //.128 flip the boolean
 function flipBool(b) {
@@ -1081,7 +1075,7 @@ function howManystickers(n) {
     return n*n*6
 }
 console.log(howManystickers(3));
-//.146 burglary series(19):Prevent changes incomp
+//.146 burglary series(19):Prevent changes imp
 function preventChanges(obj) {
     Object.freeze(obj);
     obj.noChanges = false;
@@ -1105,13 +1099,14 @@ function kineticEnergy(m,v){
 //.149 volume of a box      imp
 function volumeOfBox(volume){
     return volume.w*volume.l*volume.h
-}console.log(volumeOfBox({ w: 2, l: 5, h: 2 }));
+}
+console.log(volumeOfBox({ w: 2, l: 5, h: 2 }));
 //. 150 recreating abs() function
 function absolute(n){
     return Math.abs(n)
 }
 console.log(absolute(-122));
-//.151 is the last character "n" incomp
+//.151 is the last character "n" 
 function isLastCharacterN(str) {
     if (str[str.length-1]=="n") {
         return true
@@ -1130,7 +1125,7 @@ function arrbetween(num1,num2,arr) {
     return result
 }
 console.log(arrbetween(3,8,[1,5,95,0,4,7]));
-//153. 50-30-20 strategy incomp
+//153. 50-30-20 strategy imp
 function fiftyThirtyTwenty(ati){
     let strategy={
         Needs:(ati/100)*50,
@@ -1138,8 +1133,9 @@ function fiftyThirtyTwenty(ati){
         Savings:(ati/100)*20
     }
     return strategy
-}console.log(fiftyThirtyTwenty(100000));
-//154. count the argument incomp
+}
+console.log(fiftyThirtyTwenty(100000));
+//154. count the argument 
 function numArgs(){
     console.log(arguments.length);
 }numArgs("hi",1,2)
@@ -1157,7 +1153,7 @@ function operate(num1,num2,operator) {
      if(operator=="%") return num1%num2
     
 }console.log(operate(20,10,"%"));
-//.157. has same breads. imp+
+//.157. has same breads.
 function hasSameBreads(a,b) {
     if(a[0]==b[0]&&a[a.length-1]==b[b.length-1]&&a[0]==a[a.length-1]&&b[0]==b[b.length-1]&&a[0]==b[b.length-1]&&b[0]==a[a.length-1]){
         return true
@@ -1165,12 +1161,13 @@ function hasSameBreads(a,b) {
     return false
 } 
 console.log(hasSameBreads(["white brea","lettuce","white bread"],["white bread","tomato","white bread"]));
-//.158. nth star number incomp
+//.158. nth star number 
 function starNumber(n){
     let star=6*n*(n-1)+1
     return star
-}console.log(starNumber(3));
-//159 return the total number of paramenter incomp =>Same as Q.154
+}
+console.log(starNumber(3));
+//159 return the total number of paramenter  =>Same as Q.154
 //.160 
 function relationToLuke(str) {
     if(str=="Darth Vadar") return "luke iam your father"
@@ -1185,22 +1182,26 @@ function parseArray(arr) {
    return [x]
 }
 console.log(parseArray([1,2,"a","b"]));
-//.162 front 3- slice check repeat concanate incomp
+//.162 front 3- slice check repeat concanate imp
 function frontThree(str) {
-    let threeWords=""
-    for(let i=0;i<3;i++){
-        threeWords+=str[i]
-    }
-    let result=threeWords+threeWords+threeWords
+    let result=""
+    let x=str[0]
+    let y=str[1]
+    let z=str[2]
+    let p=x+y+z
+    let w=p.repeat(3)
+    result+=w
     return result
-}console.log(frontThree("Python"));
-//.163 extract city facts incomp
+}
+console.log(frontThree("Python"));
+//.163 extract city facts imp
 function cityFacts(facts) {
     let x=facts.name
     let y=facts.population
     let z=facts.continent
     return  `${x} has a population of ${y} and is situated in ${z}`
-}console.log(cityFacts({name: "Paris",population: "2,140,526",continent: "Europe"}));
+}
+console.log(cityFacts({name: "Paris",population: "2,140,526",continent: "Europe"}));
 //.164 return types
 function arrayValueType(arr) {
     let result=[];
@@ -1210,7 +1211,7 @@ function arrayValueType(arr) {
     }return result
 }
 console.log(arrayValueType([1,""]));
-//.165 array of string and array of numbers incomp
+//.165 array of string and array of numbers 
 function toNumberArray(arr) {
     let result=[]
     for(let i=0;i<arr.length;i++){
@@ -1239,13 +1240,14 @@ function equalSlices(ts,nr,se) {
         return true
     }return false
 }
-console.log(equalSlices(11,5,3));
-//.169 function stuttring incomp 
+
+//.169 function stuttring
 function stuttring(str) {
     let w1=str[0]
     let w2=str[1]
     return `${w1}${w2}... ${w1}${w2}... ${str}`
-}console.log(stuttring("incredible"));
+}
+console.log(stuttring("incredible"));
 //.170 destructive array incomp=>Completed this before
 //.171 fraction is greater than 1
 function graeaterThanOne(fraction) {
@@ -1271,13 +1273,15 @@ function reversePhycology(str) {
 if(str=="") return "do not do anything"
     return x
     
-}console.log(reversePhycology(""));
+}
+console.log(reversePhycology(""));
 //.174 destructing Assignment incomp=>No need
-//.175 repeat string incomp
+//.175 repeat string 
 function repeatString(txt, n){
     return txt.repeat(n)
-}console.log(repeatString("Mubashir", 3));
-//.176 does a number exist? incomp
+}
+console.log(repeatString("Mubashir", 3));
+//.176 does a number exist?  imp
 function validStrNumber(str){
     let result=true
     let num=+str
@@ -1286,7 +1290,7 @@ function validStrNumber(str){
     }
     return result
 }console.log(validStrNumber("hi"));
-//.177 count the syllables incomp
+//.177 count the syllables imp
 function countSyllables(str){
     let lstr=str.toLowerCase()
     let w1=lstr[0]
@@ -1298,15 +1302,16 @@ function countSyllables(str){
         }
     }
     return counter
-}console.log(countSyllables("Hehehehehehe"));
-//.178 squares and cubes incomp
+}
+console.log(countSyllables("Hehehehehehe"));
+//.178 squares and cubes imp
 function checkSquareAndCube(arr){
     if(Math.sqrt(arr[0])==Math.cbrt(arr[1])){
         return true
     }
     return false
 }console.log(checkSquareAndCube([4, 8]));
-//.179 circle or square incomp
+//.179 circle or square imp
 function circleorsquare(radius,area){
     let circumfrence=2*(22/7)*radius
     let perimeter=(Math.sqrt(area))*4
@@ -1314,3 +1319,764 @@ function circleorsquare(radius,area){
         return true
     }return false
 }console.log(circleorsquare(16,625));
+//.180 first class, second class and third class levers
+function determineLever(arr) {
+    if (arr[0]=="e"&&arr[1]=="f"&&arr[2]=="l") {
+        return "first class"
+    }
+    return false
+}console.log(determineLever(["e","f","l"]));
+//.181 minimalist code; this or that
+function oneOfThese(a,b,c) {
+    if(a)return "a";
+    else if(b) return "b";
+    else return "c";
+}
+//.182 char-to-ASC||  incomp
+//.183 burglary Series (14): Adjectives Total imp
+function totalAmountAdjectives(obj) {
+    return Object.keys(obj).length
+}console.log(totalAmountAdjectives({a:"moron",b:1}));
+//.184 Case Insensitive Comparison   imp
+function match(a,b) {
+    let x=b.toLowerCase()
+    if(x==a) {
+        return true
+    }
+    return false
+}
+console.log(match("hello","heLLo"));
+//.185 es6 destructiong objects 
+let person={
+    name:"junaid",
+    email:"junaidkhan803061@gmail.com",
+    
+}
+console.log(person.email);
+//.186 destructing array
+//.187 recreating the string .length property 
+function length(str) {
+    arr=str.split("")
+    counter=0
+   for(let i=0;i<arr.length;i++){
+       counter+=arr[i].length
+
+   }
+   return counter
+}console.log(length("hello world"));
+//.188 array length
+function arrL(arr) {
+    return arr.length
+    
+}
+console.log(arrL([1,2,3,4,5,6]));
+//.189 half,Quarter and eighth imp
+function halfQuarterEight(n){
+    let result=[]
+    result.push(n/2)
+    result.push(n/4)
+    result.push(n/8)
+    return result
+}
+console.log(halfQuarterEight(6));
+//.190 testing k^k==n?
+function ktok(n,k) {
+    if (k^k==n) return true
+        else return false
+}
+console.log(ktok(17,3));
+//.191 destructuring objects
+//.192 And, or , not
+//.193 shapes with N sides
+function nsidedShape(n) {
+    if(n==1)return "circle"
+    if(n==2)return "semi-circle"
+    if(n==3)return "triangle"
+    if(n==4)return "semi-circle"
+    if(n==5)return "semi-circle"
+    if(n==6)return "semi-circle"
+    if(n==7)return "semi-circle"
+    if(n==8)return "semi-circle"
+    if(n==9)return "nonagon"
+}
+console.log(nsidedShape(3));
+//.194 Multiply every array item by two
+function getMultipliedArr(arr) {
+   let result=[]
+   for(let i=0;i<arr.length;i++){
+    result.push(2*arr[i])
+
+   }return result
+    
+}
+console.log(getMultipliedArr([2,3,5]));
+//.196 Array of word Length  
+function wordLengths(arr) {
+    counter=0
+    result=[]
+   for(let i=0;i<arr.length;i++){
+      
+      result.push(arr[i].length)  
+   }
+   return result
+}
+console.log(wordLengths(["hello","world"]));
+//.197 nth Even Number 
+function nthEven(n) {
+    return 2*n
+}console.log(nthEven(100));
+//.198 string or integer? 
+function intorString(arg) {
+    if (typeof arg=="number") {
+        return "int"
+    }else if (typeof arg=="string") {
+        return "str"
+    }return null
+
+    
+}console.log(intorString(8));
+//.199 color invert     incomp
+function colorInvert(arr) {
+    let n=1<=254
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]==255) {
+            result.push(0)
+        }else if (arr[i]==0) {
+            result.push(255)
+        }else if(arr[i]==n){
+            result.push(arr[i]/2)
+        }
+            
+        }return result
+    }
+console.log(colorInvert([165,170,221]));
+//.200 fix the broken code  incomp
+//.201 binary Addition +0101  incomp
+//.202 diffrence of volumes of cuboids 
+function findDifference(a,b) {
+    let volumeA=1
+    let volumeB=1
+    for(let i=0;i<a.length;i++){
+        volumeA*=a[i]
+        volumeB*=b[i]
+    }
+    if(volumeB>volumeA){
+        return volumeB-volumeA
+    }
+    return volumeA-volumeB
+}
+console.log(findDifference([ 28, 16, 29 ], [ 7, 8, 17 ]));
+//.203 taxi journey   
+function journeyDistance(c) {
+    if(c==3)return 1
+    if(c>3){
+        let km=c-3
+        return (km/2)+1
+    }
+}
+console.log(journeyDistance(9));
+//.204 Amazing Edabit!
+function amazingEdabit(str) {
+   let arr=str.split(" ")
+   if(arr[0]=="edabit")return "edabit is amazing"
+   if(arr[0]!=="edabit") return `${arr[0]} is not amazing`
+
+    
+}
+console.log(amazingEdabit("junaid is amazing"));
+//.205 the fifth argument    
+function fifth(a,b,c,d,e) {
+   return typeof e
+}console.log(fifth(1,2,3,4,5));
+//.206 hello; hello world 
+function helloWorld(n) {
+    if (n%3==0 && n%5==0) {
+        return "hello world"
+    }else if (n%3==0) {
+        return "hello "
+    }else if (n&5==0) {
+        return "world"
+    } return "null"   
+}
+console.log(helloWorld(15));
+//. 207 volume of a pizza
+function volPizza(r,h) {
+    let x=(r*r)*h*22/7
+     let y=Math.floor(x)
+return y
+}
+console.log(volPizza(1,1));
+//.208 write two function
+function toInt(str) {
+   let result= +str
+   return result
+}
+console.log(toInt("77"));
+function tostr(n) {
+    let result = n.toString()
+    return result
+}
+console.log(tostr(77));
+//209 corona end! incomp
+//.210 burrrrrp  imp
+function longBurp(n) {
+    let r="r"
+    return `Bu${r.repeat(n)}p`   
+}
+console.log(longBurp(9));
+//.211 Spaces Bteween Each Character imp
+function spaceMeOut(str) {
+    let arr=str.split("")
+    return arr.join(" ")
+}
+console.log(spaceMeOut("junaid my nam"));
+//.212 how many d`s are there 
+function countDs(str) {
+    let arr=str.toLowerCase().split("")
+    let result=0
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]=="d"){
+            result++
+         }    
+    }
+    return arr
+}
+console.log(countDs("my friends dylat got distracted in schoool"));
+//213. Es6
+//214. free coffee Cups  imp
+function totalCups(n) {
+   return Math.floor((n/6)+n)
+} 
+console.log(totalCups(213));
+//215. calculating damage
+function damage(d,s,t) {
+    if (t=="second") {
+        return d*s
+    }else if (t=="minute") {
+        return d*s*60
+    }return d*s*60*60
+}
+console.log(damage(40,5,"second"));
+//216. rotate the array by one   incomp
+function rotateByone(arr) {
+    let last=arr[arr.length-1]
+    return arr
+}console.log(rotateByone([1,2,3,4,5]));
+//.217 add,subtract,Multiply or divide?
+ function operation(a,b) {
+    if (a+b==24) {
+        return "added"
+    }else if (a-b==24) {
+        return "substracted"
+
+    }else if (a*b==24) {
+        return "multiply"
+    }else if (a%b==24) {
+        return "divide"
+    }
+    return null
+ }
+ console.log(operation(12,2));
+ //.217 modify the last character  imp
+ function modifyLast(str,n) {
+    let last=str[str.length-1]
+    return str+last.repeat(n-1)
+ }console.log(modifyLast("hello",6));
+ //.217 get the sum of all array elements 
+   function getSumsItems(arr) {
+ let sum = 0;
+  for(let i=0;i<arr.length;i++){
+     sum+=arr[i];
+  }return sum
+   }
+   console.log(getSumsItems([2,7,4]));
+   //.218 wordCharWord  imp
+   function WordCharWord(w,str) {
+    let arr=str.split("")
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]==" "){
+            arr[i]=w
+        }
+    }
+    return arr.join("")
+   }console.log(WordCharWord("r","hello world"));
+   //.219 city school creating ids
+   function create(f,l) {
+    let z=f.toLowerCase()
+    let s=l.toLowerCase()
+    let y=s[0].toUpperCase()
+    let x=`${z[0]}${y}${l[1]}${l[2]}`
+    return x
+   }console.log(create("marry","lamb"));
+   //.220 is it a triangle?
+   function isTriangle(a,b,c) {
+    if(a<b&&b<c&&a<c){
+      return true
+    }return false    
+   }
+   console.log(isTriangle(4,3,8));
+   //.221 destructing assignment
+   //.222 the 3 programmers problem
+   function programmer(a,b,c) {
+    let result=0
+    let x=Math.min(a,b,c)
+     let y=Math.max(a,b,c)
+     if(x<y){
+        result+=y-x
+     } else if(x>y){
+        result+=x-y
+     }
+     return result
+   }console.log(programmer(147,33,526));
+   //.223 a day at the market
+   //.224 get the file name     imp
+   function getFilename(str) {
+    let arr=str.split("/")
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].includes(".")){
+            return arr[i]
+        }
+    }
+    return -1
+}
+console.log(getFilename("C:/Projects/pil_tests/ascii/edabit.txt"));
+//.225 invert an Array  imp
+function invertArray(arr) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]<0){
+            result.push((arr[i]*(-1)))
+        }else if(arr[i]>0){
+            result.push(-arr[i])
+        }
+    }
+    return result
+}
+console.log(invertArray([1, 2, 3, 4, -5]));
+//.226 the pH scale
+function pHName(n) {
+    if (n>7) {
+        return "alkaline"
+    }else if (n<7){
+      return "acidic"
+}else if(n==7){
+    return "neutral"
+}return null
+}
+console.log(pHName(8.7));
+//.227 class for fetching information on a sports players.
+let p1={
+    name:"david Jones",
+    age: 25,
+    height:175,
+    weight:75,
+}
+function getAge(){
+    return `${p1.name} is age ${p1.age}`
+}
+function getHeight(){
+    return `${p1.name} is ${p1.age}`
+}
+console.log(getAge());
+//.228 RegEx : character Classes 8
+//.229 raucous applause  
+function countClaps(str) {
+    let counter=0
+    for(let i=0;i<str.length;i++){
+        if(str[i]=="C")counter++
+    }
+    return counter
+}console.log(countClaps("ClapC"));
+//.230 sum greater than five
+function sumFive(arr) {
+     sum=0;
+     for(let i=0;i<arr.length;i++){
+        if (arr[i]>=5) {
+             sum+=arr[i]
+        }
+
+     }    return sum
+}console.log(sumFive([10,12,28,47,55,100]));
+//231 make My way Home
+function distanceHome(arr) {
+    let sum=0
+    for(let i=0;i<arr.length;i++){
+        sum+=arr[i]
+    }
+    return sum
+}
+console.log(distanceHome([2,4,2,5,-2]));
+//232 scotish screaming   imp
+
+
+//233 . lowercase, upperCase or mixed
+function getCase(str) {
+    let str1=str.toUpperCase()
+    let str2=str.toLowerCase()
+    if(str==str1){
+        return "upper"
+    }else if(str==str2){
+        return "lower"
+
+    }return "mixed"
+}
+console.log(getCase("JUNAID"));
+//.234.even or odd
+function evenOrOdd(arr) {
+    let sum = 0;
+    for(let i=0;i<arr.length;i++){
+         sum+=arr[i]
+         if(sum%2==0){
+            return "even"
+         }else if (sum%2!==0) {
+            return "odd"
+         }
+        }return "even"
+    }
+    console.log(evenOrOdd([]));
+    //.235 . is the water boiling?
+    function isBoiling(str) {
+        if(str=="212F"){ return true}
+       else if (str=="100C"){ return true}
+       return false
+    }console.log(isBoiling("212F"));
+// .236. add a consecutive list of numbers     incomp
+  function addUpTo(n) {
+    let result=0
+    for(let i=n;i>=1;i--){
+        result+=i
+    }return result
+  }console.log(addUpTo(3));
+  //.237.check if number is within a given range
+  function isInrange(n,object) {
+    if (n>=object.min&&object.min<=object.max) {
+  return true
+    
+    }return false
+  }console.log(isInrange(5,{min:5,max:5}));
+  //.238. array from a range of numbers imp
+  function rangeOfNum(arr) {
+ let result=[];
+ for(let i=Math.min(...arr);i<Math.max(...arr);i++){
+      if (!arr.includes(i)) {
+        result.push(i)
+      }
+ }return result
+}console.log(rangeOfNum([2,6]));
+//.239. Automorphic Number  imp
+function automorphic(n){
+    let str=n.toString()
+    let square=n**n
+    let sqrStr=square.toString()
+    if(str==sqrStr[sqrStr.length-1]){
+        return true
+    }
+    return false
+}console.log(automorphic(6));
+//.240 height of an Equilateral Triangle
+    function height(n) {
+        let x= n*0.11560694
+        let y= Math.floor(x)
+        return y
+    }
+    console.log(height(2));
+//.241 skip the drinks with too much sugar  incomp
+function skipTooMuchDrinks(arr) {
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]=="fanta"||arr[i]=="cola"){
+            arr[i]=""
+        }
+    }
+    return arr
+}
+console.log(skipTooMuchDrinks(["fanta","cola","water"]))
+ //.242 holloween day
+ function holloweenday(str) {
+    let arr=str.split("/")
+    if(arr[2]=="31"&&arr[1]=="10"){
+         return "bornfire toffee"
+    }return "toffee"
+
+    }
+    console.log(holloweenday("2013/10/31"));
+//.243 add the index
+function addindexes(arr) {
+    result=[]
+    
+    for(let i=0;i<arr.length;i++){
+        result.push(arr[i]+i)
+    }return result
+    
+}console.log(addindexes([1,2,3,4,5]));
+//.244 .  burglary series 07 make a copy
+console.log({piano:100,tv:50});
+//.245 .next number than Aand B and divisible by B  imp
+function divibleByB(a,b) {
+    let sum=a+b
+    if(a>b){
+        for(let i=a;i<=sum;i++){
+            if(i%b==0){
+                return i
+            }
+    }
+    }return false
+}
+console.log(divibleByB(98,3));
+//.246. sum of odd numbers imp
+function addOddToN(n){
+    let result=0;
+    for(let i=n;i>=1;i--){
+        if(i%2!==0){
+            result+=i
+        }
+    }return result
+}console.log(addOddToN(5));
+//.247  the study of wumblogy  imp
+function wumbo(str) {
+    let arr=str.split("")   
+for(let i=0;i<arr.length;i++){
+    if(arr[i]=="M")arr[i]="W"
+}
+return arr.join("")
+}
+console.log(wumbo("I LOVE MAKING CHALLANGES"));
+//.248. return Sole Element in a set
+//.249. limit a NUmber`s value incomp
+function limitNumber(a,b,c){
+    let arr=[a,b,c]
+    arr.sort((a,b)=>{return a-b})
+    return arr[1]
+}console.log(limitNumber(5,1,10));
+//.250. simple oop calculator
+//.251. coding websites score
+function scoreCalculator(e,m,h) {
+    if (e<0&&m<0&&h<0) {
+        return "invalid"
+    }else if (e>0&&m>0&&h>0){
+        return  (e*5)+(m*10)+(h*20)
+    }return null
+}console.log(scoreCalculator(1,2,3)); 
+//.252.secret function
+//.253.find the area of a regular hexagon  incomp
+function areaOfHexagon(s) {
+}
+//.254. convert kilometers to miles 
+function kmTomiles(k) {
+    return k*0.621371
+}console.log(kmTomiles(2));
+//.255.summing the squares
+function squaresSum(n) {
+    sum=0
+    for(let i=n;i>=1;i--){
+        sum+=i*i
+    }
+    return sum
+}console.log(squaresSum(13));
+//.256 Filter Strings from Array
+function filterArray(arr){
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        if(typeof arr[i]=="number"){
+            result.push(arr[i])
+        }
+    }
+    return result
+}console.log(filterArray([1,2,3,4,5,6,"a"]));
+//.257 bitwise operation 
+//.258 add up the Numbers from a single number 
+function addUp(n) {
+    let sum=0
+    for(let i=n;i>=1;i--){
+     sum+=i
+
+    }return sum
+}console.log(addUp(4));
+//.259 matchstick Houses
+function matchHouses(n) {
+    if(n<=0){
+    return 0
+    }else if (n==1) {
+        return 6
+    }else if (n>1){
+        return n*5+1
+    }return null
+}
+console.log(matchHouses(87));
+//.261. find the smallest and biggest numbers
+function minMax(arr) {
+    let s=Infinity
+    let b=-Infinity
+    for(let i=0;i<arr.length;i++){
+        if (s>arr[i]) {
+            s=arr[i]
+        }else if (b<arr[i]) {
+                  b=arr[i]
+            
+        }
+    }return [s,b]
+    
+}console.log(minMax([1,2,3,4,5,5])); 
+//.265. check if one array can be nested in another
+function canNest(arr1,arr2) {
+   let a1min=Infinity;
+   let a1max=-Infinity;
+   let a2min=Infinity;
+   let a2max=-Infinity;
+   for(let i=0;i<arr1.length;i++){
+   
+   for(let i=0;i<arr2.length;i++){
+    if(a2min>arr2[i]){
+        a2min=arr2[i]
+      }else if (a2max<arr2[i]) {
+                 a2max=arr2[i]
+      }else if (a1min>a2min&&a1max<a2max) {
+            return true
+      }if(a1min>arr1[i]){
+        a1min=arr1[i]
+      }else if (a1max<arr1[i]) {
+                 a1max=arr1[i]
+      }else if (a1min>a2min&&a1max<a2max) {
+            return true
+      }
+    }
+   }return false
+    
+}console.log(canNest([3,1],[4,0]));
+//.266.find the total of digits the given number has  imp
+function finddigit(num) {
+    let arr=num.toString()
+    for(let i=0;i<arr.length;i++){
+       counter+=arr[i].length
+    }return counter
+}console.log(finddigit(1234));
+//.267 a simple task   imp
+function decimalPart(n) {
+    let str=n.toString().split("")
+    str[0]="0"
+    return +str.join("")
+}console.log(decimalPart(2.3));
+//.268 maximum weight allowed   imp
+function weightAllowed(car,p,maxWeight) {
+    let totalP=0
+    for(let i=0;i<p.length;i++){
+        totalP+=p[i]
+    }
+    totalP=totalP*0.453592
+    car=car*0.453592
+    if((totalP+car)<=maxWeight){
+        return true
+    }
+    return false
+}console.log(weightAllowed(2900,[225,171,300,274,191],1850));
+//269.perfect roots imp
+function perfectRoots(n){
+    return Math.sqrt(n)%1==0
+}console.log(perfectRoots(256));
+//.270   the modulus operator
+//.271 binary Array to decimal incomp
+//.272 sum of cubes   imp
+function sumCubes(n) {
+    let result=0
+    for(let i=1;i<=n;i++){
+        result+=i**3
+    }
+    return result
+}console.log(sumCubes(3));
+//.273 true ones , false zeroes
+function integerBoolean(str) {
+    let result=[]
+    let arr=str.split("")
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]=="1"){
+          result.push(true)
+        }else if (arr[i]=="0") {
+            result.push(false)
+        }
+    }return result
+}console.log(integerBoolean("1,0,1,"));
+//.274.next perfect square  incomp;
+//.275. chineese zodiac
+//.276.learn lodash ;_fill an array with new values
+//.277.burglary series (11):say what   incomp
+//.278.human , cat, and dog years imp
+function CalculateYears(n) {
+    if(n<1)return "Age is invalid"
+    let result=[]
+    let human=n
+    let cat=0
+    let dog=0
+    if(n==1){
+        cat=15
+        dog=15
+    }else if(n==2){
+        cat=15+9
+        dog=15+9
+    }else{
+        cat=15+9+(4*(n-2))
+        dog=15+9+(5*(n-2))
+    }
+    result.push(human,cat,dog)
+    return result
+}console.log(CalculateYears(10));
+//.279. rotate for max number    imp
+function rotateM(n) {
+    let str=n.toString()
+    let result=""
+    for(let i=str.length-1;i>=0;i--){
+        result+=str[i]
+    }
+    return +result
+}console.log(rotateM(123));
+//.280.yourube upload count     imp
+function uploadCount(arr,month) {
+    let counter=0
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].includes(month)){
+            counter++
+        }
+    }
+    return counter
+}console.log(uploadCount(["sept 22","sept 21","oct 15"],"oct"));
+//.281.nothing is nothing? imp
+function nothingIsNothing(arr) {
+    let result=true
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]==0||arr[i]==false||arr[i]==undefined||arr[i]==null){
+            result=false
+        }
+    }
+    return result
+}    
+console.log(nothingIsNothing([33, "Hello",  true]));
+//.282 sum of two digits num   imp
+function twoDigitsSum(digits) {
+    let nArr=digits.toString().split("")
+    let sum=0
+    for(let i=0;i<nArr.length;i++){
+        sum+=(+nArr[i])
+    }
+    return sum
+}console.log(twoDigitsSum("45"));
+//.283 fix basic calculator
+function basicCalculator(a,o,b) {
+    if (o=="+") {
+        return a+b
+    }else if (o=="-") {
+        return a-b
+    }else if (o=="/"){
+        return a/b
+    }else if (o=="x") {
+        return a*b
+    }
+return null    
+}console.log(basicCalculator(2,"+",4));
+//284 designing rugs  incomp
+//.285 n tables +1 imp
+function nTablesPlusOne(n) {
+    let arr=[]
+    for(let i=1;i<=10;i++){
+        arr.push((i*n)+1)
+    }
+    return arr
+}console.log(nTablesPlusOne(7));
