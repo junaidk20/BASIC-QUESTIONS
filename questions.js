@@ -465,7 +465,7 @@ console.log(removeABC("This might be a bit hard"));
 //Q52:Find the second Largest Number 
 function sLargest(a) {
     let largest =-1;
-    let sLargest = -Infinity;3
+    let sLargest = -Infinity;
     for (let i = 0; i < a.length; i++) {
         if (largest < a[i]) {
             sLargest = largest;
@@ -1842,7 +1842,7 @@ return arr.join("")
 }
 console.log(wumbo("I LOVE MAKING CHALLANGES"));
 //.248. return Sole Element in a set
-//.249. limit a NUmber`s value incomp
+//.249. limit a NUmber`s value 
 function limitNumber(a,b,c){
     let arr=[a,b,c]
     arr.sort((a,b)=>{return a-b})
@@ -2072,7 +2072,7 @@ function basicCalculator(a,o,b) {
 return null    
 }console.log(basicCalculator(2,"+",4));
 //284 designing rugs  incomp
-//.285 n tables +1 imp
+//.285 n tables +1 
 function nTablesPlusOne(n) {
     let arr=[]
     for(let i=1;i<=10;i++){
@@ -2080,3 +2080,999 @@ function nTablesPlusOne(n) {
     }
     return arr
 }console.log(nTablesPlusOne(7));
+//.286.find the other two side lengths
+function othersides(n) {
+    let x=n*2;
+    let y=n*1.73;
+    return [x,y]
+    
+}console.log(othersides(3));
+//.287.forbidden letter imp
+function forbiddenLetter1(l,arr) {
+    for(let i=0;i<arr.length;i++){
+        for(let j=0;j<arr[i].length;j++){
+            if (arr[i][j]==l) {
+                return false
+            }
+        }
+
+    }return true
+    
+}console.log(forbiddenLetter1("r",["ock","pape","scissos"]));
+//.288.random Integer Generator imp
+function randomInt(a,b) {
+    return Math.ceil(Math.random()*a)+(b-a)
+}console.log(randomInt(5,9));
+//.289.father and sons ages
+function ageDifference(fAge,sAge) {
+      let x=sAge+sAge
+      let y=fAge-x
+      return y    
+}console.log(ageDifference(36,7));
+//.290. narcissistic Number imp
+function isNarcissistic(n){
+    let str=n.toString()
+    let sum=0
+    for(let i=0;i<str.length;i++){
+        sum+=str[i]**str.length
+    }
+    if(sum==n)return true
+    return false
+}console.log(isNarcissistic(153));
+//.291. largest number  incomp
+function largestNumber2(n,arr) {
+    arr.sort((a,b)=>{return a-b})
+    let large=[]
+    for(let i=arr.length-1;i>=(arr.length-n);i--){
+        large.push(arr[i])
+    }
+    large.sort((a,b)=>{return a-b})
+    return large
+}console.log(largestNumber2(2,[2,3,4,5,6,7,89]));
+//.292. factors of a given number
+function findFactors(n) {
+    let result=[]
+    for(let i=n;i>=1;i--){
+       if(n%i==0){
+         result.push(i)
+       }
+
+    }return result
+    
+}console.log(findFactors(9));
+//.293.minimal 5
+//.294.tallest birthday Cake candles imp
+function birthdayCakeCandles(arr) {
+    let max=-Infinity
+    let high=[]
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]>max){
+            max=arr[i]
+        }
+    }
+    for(let i=0;i<arr.length;i++){
+        if(max==arr[i]){
+            high.push(arr[i])
+        }
+    }
+    return high.length
+}console.log(birthdayCakeCandles([4,1,1,3,3,3,5,5,5]));
+//.295.sum of minimums
+function sumMinimums(arr) {
+    let smallest=[];
+    let sum=0
+    for(let i=0;i<arr.length;i++){
+        let min=Infinity;
+        for(let j=0;j<arr[i].length;j++){
+            if (min>arr[i][j]) {
+                min=arr[i][j]
+            }
+        }
+        smallest.push(min);
+    }
+    for(let i=0;i<smallest.length;i++){
+        sum+=smallest[i]
+    }
+    return sum
+}console.log(sumMinimums([[1,2,3,4,5],[6,7,8,9],[12,24,56,78]]));
+//296.cleaning up the messy array imp
+function cleanUpArray(arr){
+    let even=[]
+    let odd=[]
+    for(let i=0;i<arr.length;i++){
+        if(+arr[i]%2==0){
+            even.push(+arr[i])
+        }else if(+arr[i]%2!==0){
+            odd.push(+arr[i])
+        }
+    }
+    return [even,odd]
+}console.log(cleanUpArray(["8","11"]));
+//.297.even and odd strings  imp
+function evenOddString(txt){
+    let even=""
+    let odd=""
+    for(let i=0;i<txt.length;i++){
+        if(i%2==0){
+            even+=txt[i]
+        }else if(i%2!==0){
+            odd+=txt[i]
+        }
+    }
+    return even+" "+odd
+}console.log(evenOddString("mubashir"));
+//.298. calculate using string operation
+//.299. convert yen to usd
+function yenToUsd(jpy){
+    return jpy/107.5
+}console.log(yenToUsd(500));
+//.300.trimmed averages imp
+function trimmedAverages(arr){
+    arr.sort((a,b)=>{return a-b})
+    let sum=0
+    arr.splice(0,1)
+    arr.splice(arr.length-1,1)
+    for(let i=0;i<arr.length;i++){
+        sum+=arr[i]
+    }
+    return sum/arr.length
+}console.log(trimmedAverages([4,5,7,100]));
+//.301. keyboard Mistakes
+function keyoardMistakes(str) {
+    let arr=str.toUpperCase().split("");
+    for (let i=0;i<arr.length;i++){
+       if (arr[i]==4){ 
+       arr[i]="a" 
+       }else if (arr[i]==5) {
+                 arr[i]="s"
+       }else if (arr[i]==0) {
+                arr[i]="o"
+       }else if(arr[i]==1){
+               arr[i]="i"
+       }
+    }return arr.join("")
+        
+    }
+console.log(keyoardMistakes("juna150d"));    
+//.302.arithmetiuc progression imp
+function arithmeticProgression(f,d,n) {
+    let arr=[f]
+    for(let i=d;i<=(d*(n-1));i+=d){
+        arr.push((f+i))
+    }
+    return arr
+}console.log(arithmeticProgression(1,2,10));
+//.303. age Difference between spouces  ask
+function ageDifference(arr) {
+    let l=-Infinity;
+    let secl=-1
+    let z="years"
+    for(let i=0;i<arr.length;i++){
+        if (l<arr[i]) {
+            secl=l
+            l=arr[i]
+        }else if (l>arr[i]&&secl<arr[i]) {
+                 secl=arr[i]
+        }else if(l-secl==0){
+             return "no age difference"
+        }
+
+        }return (l-secl+" "+z)
+}console.log(ageDifference([7,5,8]));
+//.304. array index imp
+function arrIndex(lst,idx){
+    let list=lst.join(",").split(",")
+    let str=""
+    for(let i=0;i<list.length;i++){
+        for(let j=0;j<idx.length;j++){
+            if(idx[j]-1==i){
+                str+=list[i]
+            }
+        }
+    }
+    return str
+}console.log(arrIndex([["m", "u", "b"],["a", "s", "h"],["i", "r", "1"]],[1, 3, 5, 8]));
+//.305. less than array remix
+function arrayLessThan(arr) {
+    let sum=0
+    for(let i=0;i<arr.length;i++){
+        sum+=arr[i]
+    }
+    if (sum<100) {
+        return true
+    }return false
+}
+console.log(arrayLessThan([10,800]));
+//.306 return the last item  ask
+function lastItem(arr){
+    return arr[arr.length-1]
+ }
+console.log(lastItem(["junaid khan"]));
+//.307 learn lodash: is equal,check if two items are equal
+//.308 just another sum problem but
+function justAnotherSumProblem(x,y) {
+    sum=0;
+    for(let i=x;i<=y;i++){
+    sum+=i
+}
+   return sum
+}
+console.log(justAnotherSumProblem(-10,1));
+//.309 primitive darts game
+//.310.outlier Number  imp
+function outlierNumber(arr){
+    if(arr.length<3)return "Nobody is an Outlier Number"
+    let even=0
+    let odd=0
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2!==0){
+            odd++
+        }else if(arr[i]%2==0){
+            even++
+        }
+    }
+    if(even==arr.length-1){
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]%2!==0){
+                return arr[i]
+            }
+        }
+    }else if(odd==arr.length-1){
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                return arr[i]
+            }
+        }
+    }
+    return "Nobody is an Outlier Number"
+}console.log(outlierNumber([2,1,3,5,7,9]));
+//.311.simple Letters  incomplete
+//.312.sum of even pair in array  imp
+function oddSum(arr) {
+    let sum=[]
+    let result=[]
+    for(let i=0;i<arr.length-1;i++){
+        sum.push(arr[i]+arr[i+1])
+    }
+    for(let i=0;i<sum.length;i++){
+        if(sum[i]%2!==0){
+            result.push(false)
+        }else{
+            result.push(true)
+        }
+    }
+    return result
+}console.log(oddSum([11,15,6,8,9,10]));
+//.313.return odd>even   imp
+function oddEven(arr){
+    let even=0
+    let odd=0
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2!==0){
+            odd++
+        }else if(arr[i]%2==0){
+            even++
+        }
+    }
+    if(even>odd){
+        return false
+    }
+    return true
+}console.log(oddEven([1,2,3,4,5,6,7,8,9,10]));
+//.314 convert year to century  incomp
+function centuaryFromYear(year) {
+        return Math.floor((year/100)+1)
+}console.log(centuaryFromYear(2005));
+//.315 buggy UpperCase counting imp
+function countUpperCase(arr) {
+    let str=arr.join("")
+    let uStr=str.toUpperCase()
+    let counter=0
+    for(let i=0;i<str.length;i++){
+        if(str[i]==uStr[i]){
+            counter++
+        }
+    }
+    return counter
+}console.log(countUpperCase(["SOLO", "hello", "Tea", "wHat"]));
+//.316.move zero
+function moveZeros(arr) {
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]==0) {
+        }
+        }return arr
+}console.log(moveZeros([1,0,1,2,0,1,3]));
+//.318.sum of numbers in an array  imp
+function arraySum(arr) {
+    let sum=0
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2==0){
+            sum+=arr[i]**2
+        }else if(arr[i]%2!==0){
+            sum+=Math.sqrt(arr[i])
+        }
+    }
+    return sum
+}console.log(arraySum([2,4,9]));
+//.319.find the average of the letters  incom
+function averageIndex(arr) {
+}
+//.320. string pairs   incomp
+//.321. characters in shapes    incomp
+//.322.regEx special characaters  incomp
+//.323. western showdown  incomp
+     //.324.  forrmating text on edabit   incomp
+     function showdown(str1,str2) {
+       let arr1=str1.split("");
+       let arr2=str2.split("");
+       let a1=0
+       let a2=0
+        for(let i=0;i<arr1.length;i++){
+                 if (arr1[i]=="B") 
+                     (a1+=i)
+                    
+                 
+        }for (let i=0;i<arr2.length;i++){
+               if (arr2[i]=="B") 
+                   (a2+=i)
+                else if (a1<a2) 
+                        return "p1"
+                else if(a2<a1)
+                      return "p2"    
+        }return a1
+            
+        }console.log(showdown("       Bang!","            Bang!"));
+
+//.325. formattibg text on edabit
+  function mdFormat(str,t) {
+         if (t=="b") {
+            return "**"+str+"**"
+         }else if (t=="i") {
+              return "_"+str+"_"
+         } else if (t=="c") {
+            return "`"+str+"`"
+         }else if (t=="s") {
+            return "--"+str+"--"
+         }
+          return null  
+         }
+    console.log(mdFormat("bold","s"));
+//.326. owofied a sentence
+function owofied(str) {
+    let arr=str.toLowerCase().split("")
+    for (let i=0;i<arr.length;i++){
+        if(arr[i]=="i"){
+            arr[i]=arr[i].replace(arr[i],"wi")
+            
+        }else if (arr[i]=="e") {
+                 arr[i]=arr[i].replace(arr[i],"we")
+                 
+        }
+    }return  arr.join("")+" "+"owo"
+    
+}console.log(owofied("Iam gonna ride till icant no more"));
+//.327. cowboy shoutout  incomp
+ function rogerShots(arr) {
+    counter=0.5
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]=="!")
+           counter+=arr[i]
+    }return counter
+    
+ }console.log(rogerShots(["Bang!","BangBangBang!","bang!"]));
+//.328. extremely over nested incomp
+function deNest(arr) {
+    let result=""
+    for (let i=0;i<arr.length;i++){
+        for (let j=0;j<arr[i].length;j++){
+               if (typeof arr[i][j]=="string") {
+                result= arr[i][j]
+               }else if(typeof arr[i][j]=="boolean"){
+                    result=arr[i][j]
+               }else if (typeof arr[i][j]=="number"){
+                    result= arr[i][j]
+               }
+        }
+    }return result
+}console.log(deNest([[[[[[[[[[[[3]]]]]]]]]]]]));
+//.329. profit margin incomp
+function profitMargin(cp,sp) {
+    let x=cp-sp/sp
+return `${x}%`
+}console.log(profitMargin(50,50));
+ //.330. find th bug retrurning valid units of measure
+ //.331. stubit addition
+ function stubitAddition(a,b) {
+    if (typeof a=="number"&& typeof b=="number") {
+        return a+b.toString()
+    }else if (typeof a=="string"&&typeof b=="string") {
+        return (+a)+(+b)
+    }return null
+    
+ }
+console.log(stubitAddition(1,2));
+//.332. filter string        ask
+function filterString(str) {
+    let upperCounter=0
+    let lowerCounter=0
+    let numcounterr=0
+    let specialCounter=0
+    let upper=str.toUpperCase()
+    let lower=str.toLowerCase()
+    let arr=str.toLowerCase().toUpperCase().split("")
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]==upper[i]) {
+            upperCounter++
+        }else if (arr[i]==lower[i]) {
+                  lowerCounter++
+        }else if (typeof arr[i]=="number") {
+                numcounterr++
+        }else if (typeof arr[i]=="symbol") {
+                specialCounter++
+        }
+
+    } return [upperCounter,lowerCounter,numcounterr,specialCounter]
+    
+}console.log(filterString("*$(#mul2bas43hiR%@*!"));
+//.333.get word count
+function countWords(str) {
+   let counter=0;
+    let arr=str.split(" ")
+    for(let i=0;i<arr.length;i++){
+         counter++
+
+    }return counter
+     
+}console.log(countWords("just an example here move along"));
+//.334. convert number to corresponding month Name.
+//.335. cms selecter based on a given string
+function cmsSelector(arr,str) {
+    let result=[];
+    let str1=str.toLowerCase()
+    for (let i=0;i<arr.length;i++){
+        for(let j=0;j<arr[i].length;j++){
+        if (arr[i][j]==str1) {
+            result.push(arr[i])
+        }
+   
+        }
+    }return result 
+    
+}  console.log(cmsSelector(["wordpress","joomla","drupal",],"w"));
+//.336. redian to degree
+//.337. after n months  incomp
+//.338 even and last   incomp 
+function evenLast(arr) {
+    let sum=0
+   let result=[]
+    for(let i=0;i<arr.length;i++){
+        if(i%2==0){
+         result.push(arr[i]*arr[arr.length-1])
+        } 
+        for(let i=0;i<result.length;i++){
+             sum+=i
+        }
+     } return result
+}
+console.log(evenLast([2,3,4,5]));
+//.339. hot pics of danny devitto
+function preventDistraction(str) {
+    let arr=str.split(" ")
+    for(i=0;i<arr.length;i++){
+    if (arr[i]=="vines") {
+        return "no!"
+    }
+}return "safe watching"
+    
+}console.log(preventDistraction("vines that butter"));
+//.340.count the capital letter 
+function capitalLetters(str){
+    let cl=str.toUpperCase()
+    let counter=0
+    let arr=str.split("")
+  for(let i=0;i<arr.length;i++){
+       if (arr[i]==cl[i]) {
+         counter++
+       }
+  }return counter
+} console.log(capitalLetters("junaidFLH"));
+//.341 binary to decimal
+//.342 destructing object
+//.343 count syllabus
+function numberSyllabus(str) {
+    let arr=str.split("-")
+    counter=0
+    for(let i=0;i<arr.length;i++){
+         counter++
+    }
+  return counter
+
+} console.log(numberSyllabus("buf-fet"));
+//.344.not not not true
+//.345. give me the even number  incomp
+ function sumEvenNumsInRange(start,stop) {
+   let sum=0
+    for(let i=start;i<=stop;i++){
+        sum+=i%2==0
+    }return sum
+    
+ }console.log(sumEvenNumsInRange(10,20));
+//.346. a circle the two square
+//.347.cube the square root
+function cubeSquareRoot(n) {
+    let x=Math.sqrt(n)
+    let y=x**3
+    return y
+}console.log(cubeSquareRoot(81));
+//.348.unlucky 13 incomp
+function unlucky(arr) {
+    result=[]
+    for(let i=0;i<arr.length;i++){
+    
+            result.push(arr.splice(arr[i]%13==0))
+          
+     } return result
+ } console.log(unlucky([53,182,435,591,637]));
+//.349.hamming distance
+function hammingDistance(str1,str2) {
+    let arr1=str1.split("")
+    let arr2=str2.split("")
+    let counter=0
+    for(let i=0;i<arr1.length;i++){
+        if(!arr1.includes(arr2)){
+            counter++
+        }
+}return counter
+}console.log(hammingDistance("abcde","bcdef"));
+//.350. fix the Error:filter out Empty Arrays
+//.351. product divisible by sum?  ask
+function divisible(arr) {
+    let sum=0
+    let product=1
+    for(let i=0;i<arr.length;i++){
+        sum+=arr[i]
+        product*=arr[i]
+        if (sum%product==0) {
+            return true
+        }
+    }return false
+    
+}console.log(divisible([4,4,5,6,7,2,6]));
+//.352.where is bob?
+function findBob(arr) {
+    for(let i=0;i<arr.length;i++){
+         if (arr[i]=="Bob") {
+            return i
+         }
+    }return -1
+    
+}console.log(findBob(["jimmy","layla","Bob"]));
+//.354.remove the first and last character ask
+function removeFirstLast(str) {
+    
+}console.log(removeFirstLast("hello"));
+//.355.retrieve the subreddit  incomp
+function subReddit(str) {
+    let arr=str.toLowerCase().split(" / ")
+    return arr[arr.length-1]
+    
+}console.log(subReddit("https://www.reddit.com/r/funny/"));
+//.356.does the objects cpntain a given key?
+//.357.broken bridge?
+function isSafeBridge(str) {
+    let arr=str.split("")
+    for(let i=0;i<arr.length;i++){
+              if (arr[i]==" ") {
+                return false
+              }
+    }return true
+    
+}console.log(isSafeBridge("### ##"));
+//.358.between words incomp
+//.359.regEx series: string contains at least one digit  incomp
+//.360 destructing objects
+//.361 find the largest Number in an array
+function findLargestNumber(arr) {
+    let l=-Infinity;
+    for(let i=0;i<arr.length;i++){
+        if (l<arr[i]) {
+            l=arr[i]
+        }
+    }return l
+    
+}console.log(findLargestNumber([4,5,1,3,8]));
+//.362.video streaming plans
+//.363.calculate the profit
+//.364.vowel replacer  imp
+function replaceVowels(str,t) {
+    let arr=str.toLowerCase().split("")
+    for(let i=0;i<arr.length;i++){
+       if (arr[i]=="a"||arr[i]=="e"||arr[i]=="i"||arr[i]=="o"||arr[i]=="u") {
+        arr[i]=arr[i].replace(arr[i],t)
+       }
+    }
+    return arr.join("")
+}
+console.log(replaceVowels("the aardvark","#"));
+//365.capture the book  incomp
+function canCapture(arr) {
+    for(i=0;i<arr.length;i++){
+        if (arr[i][0].includes(arr[arr.length-1])) {
+            return true
+        }
+    }
+    return false
+}console.log(canCapture(["A8","e8"]));
+//.366.fix the error/comparing Arrays
+//.367.regEx boundary asertions ||  incomp
+function accept(arr) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+       if (arr[i]=="C") {
+           
+       }
+    }return result
+    
+}console.log(accept(["Ducks","Bears","Cats"]));
+//.368.word endings
+function addEndings(arr) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+           result.push(arr[i]+""+"ly")
+    }return result
+    
+}console.log(addEndings(["clever","nice"]));
+//.369.Missing third Angle   incomp
+function MissingAngles(a,b) {
+    if (a+b<90) {
+        return "acute"
+    }else if (a+b==90) {
+        return "right"
+    }else if (a+b>90&&a+b<180) {
+          return "obtuse"
+    }
+    return null
+}
+console.log(MissingAngles(27,59));
+//.370. array of consecutive numbers ask
+function getsquare(a,b) {
+    let result=[]
+    for(let i=a;i<=b;i++){
+        result.push(i)
+
+    }return result
+    
+}console.log(getsquare(100));
+//.371.negate the array of numbers
+function negate(arr) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]==-arr[i]) {
+            result.push(+arr[i])
+        }else if (arr[i]==arr[i]) {
+              result.push(-arr[i])
+        }
+
+    }return result
+    
+}console.log(negate([1,-1,3,4]));
+//.372.return the four letter string
+function isFourLetters(arr) {
+  let result=[]
+  for(let i=0;i<arr.length;i++){
+    if (arr[i].length==4) {
+        result.push(arr[i])
+    }
+
+  }  return result
+}console.log(isFourLetters(["Tomato","potato","pair"]));
+//.373 maximum difference
+function difference(arr) {
+    let l=-Infinity
+    let s=Infinity
+    for (let i=0;i<arr.length;i++){
+        if (l<arr[i]) {
+            l=arr[i]
+        }else if (s>arr[i]) {
+                  s=arr[i]
+        }
+        
+    }return l-s
+}
+console.log(difference([10,15,20,2,10,6]));
+//.374 eliminate Odd Numbers within an Array
+function noOdds(arr) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2==0){
+             result.push(arr[i])
+        }
+    }return result
+    
+}console.log(noOdds([1,2,3,4,5,6,7,8,9]));
+//.375 semantic versioning
+//.376.multiply by length
+function multiplyBylength(arr) {
+    let result=[];
+    for(let i=0;i<arr.length;i++){
+        result.push(arr[i]*arr.length)
+
+    }return result
+    
+}console.log(multiplyBylength([2,3,1,0]));
+//.377.both zero,negative or positive
+function both(a,b) {
+    if(a>0 && b>0){
+       return true
+    }else if (a<0&&b<0) {
+        return true
+    }else if (a==0&&b==0) {
+        return true
+    }return false
+    
+}console.log(both(-1,2));
+//.378.remove null from an array   incomp
+function removeNull(arr) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        result.push(arr[i])
+        if(arr[i]==null){
+         arr.splice(arr[i])
+        }
+
+    }
+       return result   
+}console.log(removeNull(["a",null,"b",null]));
+//.379.hurdle jump
+function hurdleJump(arr,j) {
+    for(let i=0;i<arr.length;i++){
+     if(arr[i]<j){
+        return true
+     }else if (arr[i]>j) {
+        return false
+     }else if (arr[i]==j) {
+        
+     }
+    }
+return null
+    }console.log(hurdleJump([1,2,1],7));
+    //.380. find the smallest Number in an array
+    function findSmallestNum(arr) {
+    let s=Infinity
+    for(let i=0;i<arr.length;i++){
+        if (s>arr[i]) {
+            s=arr[i]
+        }
+    }return s
+    }console.log(findSmallestNum([34,15,88,2]));
+//.381 toy car workshop   incomp
+function cars(w,c,f) {
+    let counter=0
+    if(w==4&&c==1&&f==2){
+        counter++
+    }
+    return counter
+}console.log(cars(88,37,17));
+//.382 return the last and first eliment in array
+function firstLast(arr) {
+    return [arr[0],arr[arr.length-1]]
+}console.log(firstLast([5,10,15,20,25]));
+//.383 flip the boolean
+//.384 sandwich fillings   incomp
+function getFillings(arr) {
+   
+    
+}console.log(getFillings(["bread","meat","bread"]));
+//.385 leap Years
+function isLeap(y) {
+    if (y%4==0 && y%100!==0) {
+        return true
+    }else if (y%400==0) {
+        return true        
+    }
+    return false
+}console.log(isLeap(2000));
+//.386.alphabet soup
+//.387. difference of Max and min numbes in array
+//.388.generate a countdown of number in an array
+function countdown(n) {
+    let result=[]
+    for(let i=n;i>=0;i--){
+         result.push(i)
+    }
+return result    
+}console.log(countdown(5));
+//.389. truthly or falsy
+//.390.reverse the order of a string incomp
+function reverse(str) {
+    
+    
+}console.log(reverse("hello world"));
+//.391. find tyhe bug checking even numbers  incomp
+//.392. fix the error:vowel edition
+  function removevowel(str) {
+    let arr=str.toLowerCase().split("")
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]=="a") {
+            arr[i]=arr[i].replace(arr[i],"")
+        }
+    }return arr.join("")
+  }console.log(removevowel("candy"));
+  //.393.smaller string Number
+  function smallerNum(a,b) {
+    let x=+a
+    let y=+b
+    if (x<y) {
+        return x.toString()
+    }else if (x>y){
+              return y.toString()
+    }else if(x==y){
+           return x.toString()
+    }
+      return null
+    
+  }console.log(smallerNum("22","44"));
+  //.394.convert number to string of dashes incomp
+  function go(n) {
+    let counter=0
+    for (let i=n;i<=60;i++){
+          counter++
+          
+    }
+      return counter
+  }console.log(go(1));
+//.395  x and y coordinates
+//.396 reverse and capitalize
+ function reverseCapitalize(str) {
+    let arr=str.toUpperCase().split("")
+    let result=""
+    for(let i=arr.length-1;i>=0;i--){
+            result+=arr[i]
+    }
+    return result
+ }
+console.log(reverseCapitalize("abc"));
+//.397 little dictionary
+ function dictionary(str,arr) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        for(let j=0;j<arr[i].length;j++){
+           if (arr[i][j]==str[i]) {
+              result.push(arr[i])
+           }
+        }
+
+    }return result
+    
+ }console.log(dictionary("bu",["button","breakfast","border"]));
+ //.398.check if string ending matches second string
+ function checkEnding(str1,str2) {
+    if(str1[str1.length-1]==str2[str2.length-1]){
+       return true
+    }return false
+    
+ }console.log(checkEnding("femine","nine"));
+ //.399.are the Numbers Equal?  
+ function isEqual(a,b) {
+     if(typeof a=="string"){
+         return false
+    }else if (typeof b=="string") {
+        return false
+    }else if (a==b) {
+        return true
+    }
+    return false
+ }console.log(isEqual(5,5));
+ //.400.shuffle the name  ask 
+ function nameShuffle(str) {
+    let arr=str.toLowerCase().split(" ")
+    let x=""
+    for (let i=0;i<arr.length;i++){
+         x+=arr[i]
+         
+
+    }return x
+    }console.log(nameShuffle("donald trump"));
+ //.401.check if the same case  ask 
+ function sameCase(str) {
+    let lower=str.toLowerCase()
+    let upper=str.toUpperCase()
+    let arr=str.split("")
+    for (let i=0;i<arr.length;i++){
+    if(upper[i]==lower[i]){
+        return false
+    }
+}return true
+}console.log(sameCase("LO"));
+//.402.is the string in order? incomp
+//.403.is the string a palidrome?
+function checkPalindrome(str) {
+if (str[0]==str[str.length-1]) {
+    return true
+}return false
+}console.log(checkPalindrome("mom"));
+//.404.additive inverse
+function additiveInverse(arr) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]==arr[i]) {
+            result.push(-arr[i])
+        }else if (arr[i]==-arr[i])
+                result.push(arr[i])
+    }return result
+    
+}console.log(additiveInverse([5,-7,8,3]));
+//.405.return first and last parameter  
+//.406.Nth smallest integer
+function nthSmallest(arr,n) {
+    for (let i=0;i<arr.length;i++){
+          if (i==n-1) {
+            return arr[i]
+            
+          }
+    }return null
+    }console.log(nthSmallest([1,3,5,7],3));
+//.407.strange pair  ask
+function isStrangePair(str1,str2) {
+     if (str1[0]==str2[str2.length-1]) {
+        return true
+     }else if (str1[str1.length-1]==str2[0]) {
+        return true
+     }return false
+}console.log(isStrangePair("bush","hubris"));
+//.408.odd up and even down
+function transform(arr) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]%2==0) {
+            result.push(arr[i]-1)
+        }else if(arr[i]%2!==0){
+             result.push(arr[i]+1)
+        }
+    }return result   
+}console.log(transform([1,2,3,4,5]));
+//.409.applying discounts  incomp
+function getDiscounts(arr,d) {
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        if (d=="") {
+            result.push(arr[i]/+d*100)
+        }
+
+    }return result
+    
+}console.log(getDiscounts([2,4,6,11],"50%"));
+//.410.array from comma -delimented string  ask
+function toArray(str) {
+    let arr=str.toLowerCase().split("")
+    
+    for(let i=0;i<arr.length;i++){
+        for(let j=0;j<arr[i].length;j++){
+            result.push(arr[i][j])
+        }
+    }return arr.join(" ")
+}console.log(toArray("junaid","khan","is"));
+//.411.state names and abbreviations  incomp
+//.412.Edaaaaabit
+function howManyTimes(n) {
+    let x="a".repeat(n)
+    return `ed${x}bit`
+    
+}console.log(howManyTimes(5));
+//.413.date format
+function formatDate(str) {
+    let arr=str.split("/")
+    let result=""
+    for(let i=arr.length-1;i>=0;i--){
+        result+=arr[i]
+
+    }return result
+    
+}console.log(formatDate("11/12/2019"));
+//.414 repeat the same item multiple times ask
+function repeat(str,t) {
+    let x=str.repeat(t)
+    return [x]    
+}
+console.log(repeat("edabit",3));
+//.415 is the object Empty
